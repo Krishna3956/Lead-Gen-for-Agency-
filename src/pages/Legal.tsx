@@ -19,7 +19,6 @@ export const Legal: React.FC = () => {
       <Section className="pb-10 md:pb-12">
         <div className="max-w-[800px]">
           <Reveal>
-            <span className="eyebrow mb-6 block">LEGAL</span>
             <h1 className="h1-text mb-6">{title}</h1>
             <p className="body-large text-text-secondary">
               Last updated: March 1, 2026

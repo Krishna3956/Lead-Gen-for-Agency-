@@ -9,10 +9,6 @@ export const BookDemo: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
           <div className="lg:col-span-5">
             <Reveal>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8">
-                <Zap className="w-3 h-3" />
-                Early Access
-              </div>
               <h1 className="text-5xl md:text-6xl font-display text-text-primary mb-8 leading-[1.1] tracking-tight">
                 Join the waitlist for <span className="text-accent">early access.</span>
               </h1>

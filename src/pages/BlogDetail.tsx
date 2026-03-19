@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Section, Reveal } from '@/src/components/Section';
 import { blogPosts } from '@/src/data/blogPosts';
 import { Calendar, User, ArrowLeft, ArrowRight } from 'lucide-react';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const BlogDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -65,9 +66,9 @@ export const BlogDetail: React.FC = () => {
               <Link to="/free-audit" className="btn-primary px-12 h-14 text-[16px]">
                 Get My Free Audit
               </Link>
-              <Link to="/book-demo" className="btn-secondary h-14 px-10 text-[16px]">
+              <WaitlistButton className="btn-secondary h-14 px-10 text-[16px]">
                 Join the Waitlist
-              </Link>
+              </WaitlistButton>
             </div>
           </Reveal>
 

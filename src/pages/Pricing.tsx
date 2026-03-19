@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Section, Reveal } from '@/src/components/Section';
 import { cn } from '@/src/lib/utils';
 import { Check, ArrowRight, Info, Shield, Zap, TrendingUp, Calculator } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 const PLANS = [
   {
@@ -103,11 +103,18 @@ export const Pricing: React.FC = () => {
             const isSelected = selectedPlan === plan.name;
             return (
               <Reveal key={i} delay={i * 100}>
-                <button
-                  type="button"
+                <div
+                  role="button"
+                  tabIndex={0}
                   onClick={() => setSelectedPlan(plan.name)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      setSelectedPlan(plan.name);
+                    }
+                  }}
                   className={cn(
-                    "relative h-full w-full flex flex-col p-6 md:p-7 border rounded-[40px] transition-all duration-500 text-left",
+                    "relative h-full w-full flex flex-col p-6 md:p-7 border rounded-[40px] transition-all duration-500 text-left cursor-pointer",
                     isSelected
                       ? "bg-white border-accent shadow-[0_20px_50px_rgba(79,70,229,0.14)] scale-[1.02] z-10"
                       : plan.popular
@@ -137,14 +144,14 @@ export const Pricing: React.FC = () => {
                     <span className="text-text-secondary text-[16px] font-medium">/mo</span>
                   </div>
 
-                  <Link to="/book-demo" className={cn(
+                  <WaitlistButton className={cn(
                     "w-full py-3.5 font-bold text-[15px] mb-5 transition-all flex items-center justify-center gap-2 rounded-2xl",
                     plan.type === 'primary' 
                       ? "btn-primary" 
                       : "bg-black/5 text-text-primary border border-transparent hover:border-accent/30 shadow-sm"
                   )}>
                     {plan.btn} <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </WaitlistButton>
 
                   <div className="space-y-4 mt-auto">
                     <span className="text-[11px] font-bold text-text-muted uppercase tracking-widest block mb-4">What's included</span>
@@ -157,7 +164,7 @@ export const Pricing: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </button>
+                </div>
               </Reveal>
             );
           })}

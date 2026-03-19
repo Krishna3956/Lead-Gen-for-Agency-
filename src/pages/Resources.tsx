@@ -25,7 +25,6 @@ export const Resources: React.FC = () => {
       <Section background="grid" className="pb-10 pt-12 md:pb-12 md:pt-16">
         <div className="max-w-[800px]">
           <Reveal>
-            <span className="eyebrow mb-6">Resources</span>
             <h1 className="page-title mb-6">
               Insights for the modern <span className="text-accent">staffing leader.</span>
             </h1>

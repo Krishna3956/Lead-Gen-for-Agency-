@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section, Reveal } from '@/src/components/Section';
 import { Mail, MapPin, Phone, ArrowRight, Send } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const Contact: React.FC = () => {
   return (
@@ -10,7 +10,6 @@ export const Contact: React.FC = () => {
       <Section className="pb-10 md:pb-12">
         <div className="max-w-[800px]">
           <Reveal>
-            <span className="text-[12px] font-semibold text-accent tracking-wide mb-6 block">CONTACT US</span>
             <h1 className="text-[48px] md:text-[64px] font-bold text-text-primary mb-6 tracking-tight">Let's talk about growing your staffing firm.</h1>
             <p className="text-[20px] text-text-secondary leading-relaxed">
               Whether you want to win more searches for your niche, improve your staffing site, or see what inbound could look like for your firm, we are here to help.
@@ -140,9 +139,9 @@ export const Contact: React.FC = () => {
                 <p className="text-text-secondary mb-6">
                   Skip the form and join the waitlist for early access to Cognivo.
                 </p>
-                <Link to="/book-demo" className="flex items-center gap-2 text-accent font-bold group uppercase tracking-widest text-sm">
+                <WaitlistButton className="flex items-center gap-2 text-accent font-bold group uppercase tracking-widest text-sm">
                   Join The Waitlist <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </WaitlistButton>
               </div>
             </Reveal>
           </div>

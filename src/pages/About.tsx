@@ -9,10 +9,6 @@ export const About: React.FC = () => {
       <Section className="pb-16 pt-12 md:pb-20 md:pt-16">
         <div className="max-w-[800px] mx-auto text-center">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
-              <Heart className="w-3 h-3" />
-              <span className="uppercase">Our Mission</span>
-            </div>
             <h1 className="text-[56px] md:text-[80px] font-display font-medium text-text-primary leading-[1.05] mb-8 tracking-tight">
               We help staffing firms turn their sites <br /><span className="italic text-accent">into inbound growth systems.</span>
             </h1>

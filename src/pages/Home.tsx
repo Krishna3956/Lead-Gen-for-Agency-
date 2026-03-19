@@ -8,7 +8,6 @@ import { motion } from 'motion/react';
 
 export const Home: React.FC = () => {
   const [isAuditModalOpen, setIsAuditModalOpen] = React.useState(false);
-  const [isEarlyAccessModalOpen, setIsEarlyAccessModalOpen] = React.useState(false);
 
   return (
     <div className="overflow-x-hidden pt-16">
@@ -18,13 +17,6 @@ export const Home: React.FC = () => {
           <div className="pointer-events-none absolute left-1/2 top-2 h-72 w-72 -translate-x-[145%] rounded-full bg-accent/18 blur-3xl" />
           <div className="pointer-events-none absolute right-1/2 top-16 h-80 w-80 translate-x-[138%] rounded-full bg-sky-400/12 blur-3xl" />
           <div className="pointer-events-none absolute inset-x-0 top-24 mx-auto h-48 w-[620px] rounded-full bg-gradient-to-r from-accent/10 via-sky-400/10 to-accent/5 blur-3xl" />
-          <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 text-accent text-[13px] font-bold mb-12 rounded-full tracking-wide uppercase">
-              <Zap className="w-3.5 h-3.5" />
-              <span>Inbound Leads for Staffing Agencies</span>
-            </div>
-          </Reveal>
-          
           <Reveal delay={100}>
             <h1 className="text-[56px] md:text-[82px] lg:text-[92px] font-display font-medium text-text-primary leading-[1.02] mb-12 tracking-tight">
               Your <span className="text-accent">agency&apos;s</span> operating <br />
@@ -40,36 +32,24 @@ export const Home: React.FC = () => {
           </Reveal>
 
           <Reveal delay={300}>
-            <form
-              action="https://formspree.io/f/mqakpjne"
-              method="POST"
-              className="mx-auto max-w-[820px] w-full"
-            >
-              <input type="text" name="_gotcha" style={{ display: 'none' }} />
-              <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
+            <div className="mx-auto max-w-[820px] w-full">
               <div className="flex flex-col sm:flex-row items-stretch gap-3 rounded-[30px] border border-accent/20 bg-white/88 p-3 shadow-[0_25px_80px_rgba(79,70,229,0.14)] backdrop-blur-xl ring-1 ring-white/70">
                 <input
                   type="email"
-                  name="email"
-                  required
                   className="h-14 flex-1 rounded-[22px] border border-transparent bg-gradient-to-br from-bg-surface to-accent/5 px-5 text-[16px] text-text-primary outline-none transition-all placeholder:text-text-muted focus:border-accent"
                   placeholder="Enter your business email"
                 />
-                <button
-                  type="submit"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsEarlyAccessModalOpen(true);
-                  }}
-                  className="h-14 whitespace-nowrap rounded-[22px] bg-accent px-8 text-[16px] font-bold text-white shadow-xl shadow-accent/25 transition-all hover:scale-[1.01] hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30"
+                <Link
+                  to="/sign-in"
+                  className="flex h-14 whitespace-nowrap items-center justify-center rounded-[22px] bg-accent px-8 text-[16px] font-bold text-white shadow-xl shadow-accent/25 transition-all hover:scale-[1.01] hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30"
                 >
-                  Join the Waitlist
-                </button>
+                  Sign in
+                </Link>
               </div>
               <p className="mt-7 text-[14px] font-medium text-text-muted">
                 800+ staffing agencies have already registered for early access.
               </p>
-            </form>
+            </div>
           </Reveal>
 
         </div>
@@ -81,20 +61,20 @@ export const Home: React.FC = () => {
         <div className="container-custom relative z-10">
           <div className="max-w-[800px]">
             <Reveal>
-              <h2 className="text-[48px] md:text-[72px] font-bold text-white leading-[1] tracking-tight mb-8 md:mb-10">
+              <h2 className="text-[45px] md:text-[69px] font-bold text-white leading-[1] tracking-tight mb-8 md:mb-10">
                 Hiring managers decide <br />
                 <span className="font-display text-white">before they reach out.</span>
               </h2>
-              <p className="text-[20px] md:text-[26px] text-slate-400 leading-relaxed mb-10 md:mb-12 font-medium">
+              <p className="text-[17px] md:text-[23px] text-slate-400 leading-relaxed mb-10 md:mb-12 font-medium">
                 Staffing buyers now use AI search tools to compare recruiting firms, specialty staffing partners, and executive search providers. If your site is not built around the roles, verticals, and locations they are asking about, you lose the conversation before your team even gets a call.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-4">
-                  <div className="text-accent font-bold text-[32px]">24/7</div>
+                  <div className="text-accent font-bold text-[29px]">24/7</div>
                   <p className="text-slate-400 font-medium">Your site keeps attracting staffing demand while your recruiters are working live searches.</p>
                 </div>
                 <div className="space-y-4">
-                  <div className="text-accent font-bold text-[32px]">1 engine</div>
+                  <div className="text-accent font-bold text-[29px]">1 engine</div>
                   <p className="text-slate-400 font-medium">One system for service pages, vertical pages, geo pages, trust signals, and lead capture.</p>
                 </div>
               </div>
@@ -275,58 +255,6 @@ export const Home: React.FC = () => {
                 className="btn-primary w-full h-14 text-[16px] font-bold"
               >
                 Get My Free Audit
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
-
-      {isEarlyAccessModalOpen && (
-        <div className="fixed inset-0 z-[80] flex items-center justify-center p-6">
-          <button
-            type="button"
-            aria-label="Close early access popup"
-            className="absolute inset-0 bg-text-primary/45 backdrop-blur-sm"
-            onClick={() => setIsEarlyAccessModalOpen(false)}
-          />
-          <div className="relative z-10 w-full max-w-[560px] rounded-[32px] border border-border-subtle bg-white p-8 md:p-10 shadow-[0_30px_120px_rgba(15,23,42,0.2)]">
-            <button
-              type="button"
-              className="absolute right-5 top-5 text-text-muted transition-colors hover:text-text-primary"
-              onClick={() => setIsEarlyAccessModalOpen(false)}
-            >
-              x
-            </button>
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/15 bg-accent/5 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-accent mb-6">
-              <Zap className="w-3 h-3" />
-              Early Access
-            </div>
-            <h3 className="text-[34px] md:text-[42px] font-display font-medium text-text-primary leading-[1.05] tracking-tight mb-4">
-              Join the <span className="text-accent">early-access waitlist.</span>
-            </h3>
-            <p className="text-[18px] text-text-secondary leading-relaxed mb-8">
-              Enter your business email and we&apos;ll save your spot.
-            </p>
-
-            <form
-              action="https://formspree.io/f/mqakpjne"
-              method="POST"
-              className="space-y-4"
-            >
-              <input type="text" name="_gotcha" style={{ display: 'none' }} />
-              <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full h-14 rounded-2xl border border-border-subtle bg-bg-surface px-5 text-[16px] text-text-primary outline-none transition-all placeholder:text-text-muted focus:border-accent"
-                placeholder="Enter your business email"
-              />
-              <button
-                type="submit"
-                className="btn-primary w-full h-14 text-[16px] font-bold"
-              >
-                Join the Waitlist
               </button>
             </form>
           </div>

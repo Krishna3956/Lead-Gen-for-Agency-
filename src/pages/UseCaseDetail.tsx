@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Section, Reveal } from '@/src/components/Section';
 import { useCases } from '@/src/data/useCases';
 import { ArrowRight, Zap, Shield, Target, TrendingUp } from 'lucide-react';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const UseCaseDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,9 +19,6 @@ export const UseCaseDetail: React.FC = () => {
       <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="page-chip mb-8">
-              <span className="uppercase">Use case analysis</span>
-            </div>
             <h1 className="page-title mb-8">
               {useCase.title}
             </h1>
@@ -28,9 +26,9 @@ export const UseCaseDetail: React.FC = () => {
               {useCase.description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/book-demo" className="btn-primary">
+              <WaitlistButton className="btn-primary">
                 Join the Waitlist
-              </Link>
+              </WaitlistButton>
               <Link to="/free-audit" className="btn-secondary">
                 Get Free Audit
               </Link>
@@ -117,9 +115,9 @@ export const UseCaseDetail: React.FC = () => {
               Our system provides the predictable, scalable source of 
               new business that modern staffing agencies need to thrive.
             </p>
-            <Link to="/book-demo" className="btn-primary bg-white text-accent hover:bg-white/90 w-full">
+            <WaitlistButton className="btn-primary bg-white text-accent hover:bg-white/90 w-full">
               Join the Waitlist
-            </Link>
+            </WaitlistButton>
           </Reveal>
         </div>
       </Section>

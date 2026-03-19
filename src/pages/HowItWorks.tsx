@@ -2,7 +2,7 @@ import React from 'react';
 import { Section, Reveal } from '@/src/components/Section';
 import { cn } from '@/src/lib/utils';
 import { Database, Search, PenTool, Globe, Shield, BarChart3, ArrowRight, Zap, Target, Cpu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 const AGENTS = [
   {
@@ -237,9 +237,9 @@ export const HowItWorks: React.FC = () => {
               <span className="uppercase">Get Started</span>
             </div>
             <h3 className="text-[32px] md:text-[48px] font-display font-medium text-text-primary mb-5 tracking-tight">Ready to help more hiring managers find your firm?</h3>
-            <Link to="/book-demo" className="btn-primary px-12 py-5 text-[16px]">
+            <WaitlistButton className="btn-primary px-12 py-5 text-[16px]">
               Join the Waitlist
-            </Link>
+            </WaitlistButton>
           </Reveal>
         </div>
       </Section>

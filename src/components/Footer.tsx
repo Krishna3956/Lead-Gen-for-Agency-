@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const Footer: React.FC = () => {
   return (
@@ -16,9 +17,9 @@ export const Footer: React.FC = () => {
               Cognivo turns your website into a qualified inbound engine for AI search platforms.
             </p>
             <div className="flex gap-4">
-              <Link to="/book-demo" className="btn-primary h-10 px-6 text-[12px]">
+              <WaitlistButton className="btn-primary h-10 px-6 text-[12px]">
                 Join the Waitlist
-              </Link>
+              </WaitlistButton>
             </div>
           </div>
 

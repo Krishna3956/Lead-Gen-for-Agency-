@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Section, Reveal } from '@/src/components/Section';
 import { features } from '@/src/data/features';
 import { Check, ArrowRight, Zap, Shield, Target } from 'lucide-react';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const FeatureDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,9 +19,6 @@ export const FeatureDetail: React.FC = () => {
       <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="page-chip mb-8">
-              <span className="uppercase">Feature deep dive</span>
-            </div>
             <h1 className="page-title mb-8">
               {feature.title}
             </h1>
@@ -28,9 +26,9 @@ export const FeatureDetail: React.FC = () => {
               {feature.description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/book-demo" className="btn-primary">
+              <WaitlistButton className="btn-primary">
                 Join the Waitlist
-              </Link>
+              </WaitlistButton>
               <Link to="/pricing" className="btn-secondary">
                 View Pricing
               </Link>

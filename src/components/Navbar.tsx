@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/src/lib/utils';
 import { ChevronDown } from 'lucide-react';
 import { useCases } from '@/src/data/useCases';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -33,14 +34,12 @@ export const Navbar: React.FC = () => {
           <NavLink to="/how-it-works">How It Works</NavLink>
           <UseCasesDropdown />
           <NavLink to="/pricing">Pricing</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
         </div>
 
         <div className="flex items-center gap-4">
-          <Link to="/book-demo" className="h-11 px-6 rounded-2xl bg-accent text-white text-[14px] font-bold tracking-tight shadow-lg shadow-accent/20 transition-all hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 flex items-center justify-center">
+          <WaitlistButton className="h-11 px-6 rounded-2xl bg-accent text-white text-[14px] font-bold tracking-tight shadow-lg shadow-accent/20 transition-all hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 flex items-center justify-center">
             Join the Waitlist
-          </Link>
+          </WaitlistButton>
         </div>
       </div>
     </nav>
@@ -80,21 +79,16 @@ const UseCasesDropdown: React.FC = () => {
         <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
       </button>
 
-      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[420px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-        <div className="rounded-[28px] border border-border-subtle bg-white/95 p-3 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-xl">
-          <div className="grid grid-cols-1 gap-2">
+      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[260px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+        <div className="rounded-[20px] border border-border-subtle bg-white/95 p-2 shadow-[0_18px_40px_rgba(15,23,42,0.10)] backdrop-blur-xl">
+          <div className="grid grid-cols-1 gap-1">
             {useCases.map((useCase) => (
               <Link
                 key={useCase.id}
                 to={`/use-cases/${useCase.id}`}
-                className="rounded-[20px] border border-transparent bg-gradient-to-r from-white to-bg-surface px-4 py-4 transition-all hover:border-accent/15 hover:from-accent/5 hover:to-sky-50"
+                className="rounded-[14px] px-3 py-2.5 text-[14px] font-medium text-text-primary transition-all hover:bg-accent/6 hover:text-accent"
               >
-                <div className="text-[15px] font-semibold tracking-tight text-text-primary">
-                  {useCase.title}
-                </div>
-                <div className="mt-1 text-[13px] leading-relaxed text-text-secondary line-clamp-2">
-                  {useCase.description}
-                </div>
+                {useCase.title}
               </Link>
             ))}
           </div>

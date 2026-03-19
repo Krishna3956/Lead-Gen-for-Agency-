@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Section, Reveal } from '@/src/components/Section';
 import { cities } from '@/src/data/cities';
 import { MapPin, Target, TrendingUp, ArrowRight, Shield, Zap, BarChart3 } from 'lucide-react';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const CityDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,10 +19,6 @@ export const CityDetail: React.FC = () => {
       <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="page-chip mb-8">
-              <MapPin className="w-3 h-3" />
-              <span className="uppercase">Market analysis: {city.name}, {city.state}</span>
-            </div>
             <h1 className="page-title mb-8">
               Inbound client leads in <span className="text-accent">{city.name}.</span>
             </h1>
@@ -120,9 +117,9 @@ export const CityDetail: React.FC = () => {
               Our system puts you in front of clients at the exact moment 
               they are ready to hire.
             </p>
-            <Link to="/book-demo" className="btn-primary bg-white text-accent hover:bg-white/90 w-full">
+            <WaitlistButton className="btn-primary bg-white text-accent hover:bg-white/90 w-full">
               Join the Waitlist
-            </Link>
+            </WaitlistButton>
           </Reveal>
         </div>
       </Section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section, Reveal } from '@/src/components/Section';
 import { Rocket, Zap, Shield, Sparkles, Code } from 'lucide-react';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 const LOGS = [
   {
@@ -48,7 +49,6 @@ export const Changelog: React.FC = () => {
       <Section className="pb-10 md:pb-12">
         <div className="max-w-[800px]">
           <Reveal>
-            <span className="eyebrow mb-6 block">CHANGELOG</span>
             <h1 className="h1-text mb-6">Product updates & improvements.</h1>
             <p className="body-large text-text-secondary">
               We are shipping new features and optimizations every week to keep staffing firms ahead of the curve.
@@ -119,9 +119,9 @@ export const Changelog: React.FC = () => {
             <p className="text-text-secondary mb-8 max-w-[500px] mx-auto">
               Join the waitlist to get early access to the latest Cognivo updates and product releases.
             </p>
-            <button className="btn-primary">
+            <WaitlistButton className="btn-primary">
               Join the Waitlist
-            </button>
+            </WaitlistButton>
           </Reveal>
         </div>
       </Section>

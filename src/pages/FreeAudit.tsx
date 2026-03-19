@@ -10,7 +10,6 @@ export const FreeAudit: React.FC = () => {
       <Section className="pb-16 md:pb-20">
         <div className="max-w-[800px] mx-auto text-center mb-20">
           <Reveal>
-            <span className="eyebrow mb-6 block">FREE ANALYSIS</span>
             <h1 className="h1-text mb-8 leading-[1.1] italic uppercase tracking-tighter">
               Is your staffing firm <br />
               <span className="text-accent">AI-Search ready?</span>
