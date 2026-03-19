@@ -6,29 +6,29 @@ export const FreeAudit: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="pt-20">
-      <Section className="pb-24">
+    <div className="pt-16">
+      <Section className="pb-16 md:pb-20">
         <div className="max-w-[800px] mx-auto text-center mb-20">
           <Reveal>
             <span className="eyebrow mb-6 block">FREE ANALYSIS</span>
             <h1 className="h1-text mb-8 leading-[1.1] italic uppercase tracking-tighter">
-              Is your agency <br />
+              Is your staffing firm <br />
               <span className="text-accent">AI-Search ready?</span>
             </h1>
             <p className="body-large text-text-secondary max-w-[640px] mx-auto">
-              We'll run a deep diagnostic on your current digital footprint and show you exactly where you're losing inbound leads to competitors.
+              We will run a deep diagnostic on your current digital footprint and show you exactly where your staffing firm is losing inbound demand to competitors.
             </p>
           </Reveal>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {[
-            { title: 'Search Intent Audit', desc: 'We analyze the top 50 keywords in your niche and see how you rank against the top 5 competitors.', icon: <Search className="w-6 h-6" /> },
-            { title: 'Authority Score', desc: 'A proprietary metric showing how AI search engines perceive your agency\'s expertise.', icon: <Globe className="w-6 h-6" /> },
-            { title: 'Inbound Gap Analysis', desc: 'Identify the specific content and technical gaps preventing you from owning your market.', icon: <BarChart3 className="w-6 h-6" /> }
+            { title: 'Search Intent Audit', desc: 'We analyze the top searches in your specialty and compare your visibility against the top competitors in your market.', icon: <Search className="w-6 h-6" /> },
+            { title: 'Authority Score', desc: 'A proprietary metric showing how AI search platforms perceive your staffing firm\'s credibility.', icon: <Globe className="w-6 h-6" /> },
+            { title: 'Inbound Gap Analysis', desc: 'Identify the content and technical gaps preventing your firm from winning more niche and geo searches.', icon: <BarChart3 className="w-6 h-6" /> }
           ].map((item, i) => (
             <Reveal key={i} delay={i * 100}>
-              <div className="bg-bg-surface border border-border-subtle p-10 hover:border-accent transition-colors group h-full">
+              <div className="bg-bg-surface border border-border-subtle p-10 hover:border-accent transition-colors group h-full rounded-[32px]">
                 <div className="w-12 h-12 bg-accent/10 flex items-center justify-center text-accent mb-8 group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
@@ -41,7 +41,7 @@ export const FreeAudit: React.FC = () => {
 
         <Reveal delay={400}>
           <div className="max-w-[700px] mx-auto">
-            <div className="bg-bg-elevated border border-border-strong p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div className="bg-bg-elevated border border-border-strong p-8 md:p-12 shadow-2xl relative overflow-hidden rounded-[32px]">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-[100px]" />
               
               <div className="space-y-8 relative z-10">
@@ -60,22 +60,22 @@ export const FreeAudit: React.FC = () => {
                   <input type="hidden" name="_next" value="https://ais-dev-utpyfs52wwdoajbxdu2y6o-201252030366.asia-southeast1.run.app/thank-you" />
 
                   <div className="space-y-2">
-                    <label className="text-[11px] uppercase font-bold text-text-secondary tracking-widest">Agency Website URL</label>
-                    <input type="url" name="websiteUrl" required className="w-full bg-bg-base border border-border-subtle px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="https://agency.com" />
+                    <label className="text-[11px] uppercase font-bold text-text-secondary tracking-widest">Staffing Website URL</label>
+                    <input type="url" name="websiteUrl" required className="w-full bg-bg-base border border-border-subtle rounded-2xl px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="https://yourfirm.com" />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[11px] uppercase font-bold text-text-secondary tracking-widest">Full Name</label>
-                      <input type="text" name="fullName" required className="w-full bg-bg-base border border-border-subtle px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="John Doe" />
+                      <input type="text" name="fullName" required className="w-full bg-bg-base border border-border-subtle rounded-2xl px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="John Doe" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[11px] uppercase font-bold text-text-secondary tracking-widest">Work Email</label>
-                      <input type="email" name="email" required className="w-full bg-bg-base border border-border-subtle px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="john@agency.com" />
+                      <input type="email" name="email" required className="w-full bg-bg-base border border-border-subtle rounded-2xl px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="john@agency.com" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-[11px] uppercase font-bold text-text-secondary tracking-widest">Primary Competitor</label>
-                    <input type="text" name="competitor" required className="w-full bg-bg-base border border-border-subtle px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="Who are you competing with?" />
+                    <input type="text" name="competitor" required className="w-full bg-bg-base border border-border-subtle rounded-2xl px-4 py-3 text-text-primary focus:border-accent outline-none transition-colors" placeholder="Who are you competing with?" />
                   </div>
                   <button 
                     type="submit"

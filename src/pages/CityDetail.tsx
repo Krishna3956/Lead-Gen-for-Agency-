@@ -13,16 +13,16 @@ export const CityDetail: React.FC = () => {
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-14">
       {/* HERO */}
-      <Section background="grid" className="pt-20 pb-32">
+      <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8 rounded-none">
+            <div className="page-chip mb-8">
               <MapPin className="w-3 h-3" />
-              <span>MARKET ANALYSIS: {city.name}, {city.state}</span>
+              <span className="uppercase">Market analysis: {city.name}, {city.state}</span>
             </div>
-            <h1 className="text-[48px] md:text-[72px] font-black text-text-primary leading-[1.1] mb-8 italic uppercase tracking-tighter">
+            <h1 className="page-title mb-8">
               Inbound client leads in <span className="text-accent">{city.name}.</span>
             </h1>
             <p className="text-[20px] text-text-secondary leading-relaxed mb-12">
@@ -42,31 +42,31 @@ export const CityDetail: React.FC = () => {
       </Section>
 
       {/* MARKET STATS */}
-      <Section className="py-24 border-y border-border-subtle bg-bg-surface">
+      <Section className="py-16 md:py-20 border-y border-border-subtle bg-bg-surface">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <Reveal delay={100} className="glass-card p-10">
             <div className="text-text-muted text-[12px] font-bold uppercase tracking-widest mb-4">Hiring Managers</div>
-            <div className="text-[48px] font-black text-text-primary mb-2">{city.stats.hiringManagers}</div>
+            <div className="text-[48px] font-display font-medium text-text-primary tracking-tight mb-2">{city.stats.hiringManagers}</div>
             <p className="text-text-secondary text-[14px]">Active decision makers in the {city.name} metro area.</p>
           </Reveal>
           <Reveal delay={200} className="glass-card p-10">
             <div className="text-text-muted text-[12px] font-bold uppercase tracking-widest mb-4">Search Volume</div>
-            <div className="text-[48px] font-black text-text-primary mb-2">{city.stats.avgSearchVolume}</div>
+            <div className="text-[48px] font-display font-medium text-text-primary tracking-tight mb-2">{city.stats.avgSearchVolume}</div>
             <p className="text-text-secondary text-[14px]">Monthly searches for "staffing agency {city.name.toLowerCase()}".</p>
           </Reveal>
           <Reveal delay={300} className="glass-card p-10">
             <div className="text-text-muted text-[12px] font-bold uppercase tracking-widest mb-4">Competition</div>
-            <div className="text-[48px] font-black text-accent mb-2">{city.stats.competitionLevel}</div>
+            <div className="text-[48px] font-display font-medium text-accent tracking-tight mb-2">{city.stats.competitionLevel}</div>
             <p className="text-text-secondary text-[14px]">Relative difficulty to rank organically in this market.</p>
           </Reveal>
         </div>
       </Section>
 
       {/* WHY IT WORKS IN THIS CITY */}
-      <Section className="py-32">
+      <Section className="py-20 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <Reveal>
-            <h2 className="text-[40px] md:text-[56px] font-black text-text-primary mb-8 leading-tight italic uppercase tracking-tighter">
+            <h2 className="section-heading md:text-[56px] mb-8">
               How we dominate the <br />
               <span className="text-accent">{city.name} market.</span>
             </h2>
@@ -76,7 +76,7 @@ export const CityDetail: React.FC = () => {
                   <Target className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[18px] font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Hyper-Local Targeting</h4>
+                  <h4 className="card-heading text-[18px] mb-2">Hyper-Local Targeting</h4>
                   <p className="text-text-secondary">
                     We don't just target "{city.name}". We target specific neighborhoods, 
                     business districts, and niche industries unique to {city.name}.
@@ -88,7 +88,7 @@ export const CityDetail: React.FC = () => {
                   <Zap className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[18px] font-bold text-text-primary mb-2 italic uppercase tracking-tighter">AI Visibility Swarm</h4>
+                  <h4 className="card-heading text-[18px] mb-2">AI Visibility Swarm</h4>
                   <p className="text-text-secondary">
                     Our agents ensure your agency is the top recommendation when 
                     {city.name} companies ask AI tools for recruiting help.
@@ -100,7 +100,7 @@ export const CityDetail: React.FC = () => {
                   <BarChart3 className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[18px] font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Verified Authority</h4>
+                  <h4 className="card-heading text-[18px] mb-2">Verified Authority</h4>
                   <p className="text-text-secondary">
                     We build the local trust signals that convince {city.name} 
                     hiring managers that you are the established expert.
@@ -111,7 +111,7 @@ export const CityDetail: React.FC = () => {
           </Reveal>
 
           <Reveal delay={200} className="glass-card p-12 bg-accent text-white border-none">
-            <h3 className="text-[32px] font-black mb-6 leading-tight italic uppercase tracking-tighter">
+            <h3 className="section-heading text-white text-[32px] mb-6">
               Stop chasing {city.name} clients. <br />
               Let them find you.
             </h3>
@@ -128,9 +128,9 @@ export const CityDetail: React.FC = () => {
       </Section>
 
       {/* OTHER CITIES */}
-      <Section background="surface" className="py-24 border-t border-border-subtle">
+      <Section background="surface" className="py-16 md:py-20 border-t border-border-subtle">
         <div className="mb-12">
-          <h3 className="text-[24px] font-bold text-text-primary italic uppercase tracking-tighter">Other Markets We Serve</h3>
+          <h3 className="card-heading text-[24px]">Other Markets We Serve</h3>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {cities.filter(c => c.id !== id).slice(0, 10).map(c => (

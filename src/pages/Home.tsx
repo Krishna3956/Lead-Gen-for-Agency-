@@ -1,4 +1,5 @@
 import React from 'react';
+import { PlatformLogoRotator } from '@/src/components/PlatformLogoRotator';
 import { Section, Reveal } from '@/src/components/Section';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ArrowRight, Zap, Target, Search, BarChart3, Shield, Globe, Users } from 'lucide-react';
@@ -9,112 +10,85 @@ export const Home: React.FC = () => {
   return (
     <div className="overflow-x-hidden pt-16">
       {/* HERO SECTION */}
-      <Section background="grid" className="pt-24 pb-32 md:pt-40 md:pb-48">
-        <div className="max-w-[1100px] mx-auto text-center relative">
+      <Section background="grid" className="pt-4 pb-28 md:pt-10 md:pb-36">
+        <div className="max-w-[1240px] mx-auto min-h-[calc(100vh-6.5rem)] flex flex-col justify-center text-center relative">
+          <div className="pointer-events-none absolute left-1/2 top-2 h-72 w-72 -translate-x-[145%] rounded-full bg-accent/18 blur-3xl" />
+          <div className="pointer-events-none absolute right-1/2 top-16 h-80 w-80 translate-x-[138%] rounded-full bg-sky-400/12 blur-3xl" />
+          <div className="pointer-events-none absolute inset-x-0 top-24 mx-auto h-48 w-[620px] rounded-full bg-gradient-to-r from-accent/10 via-sky-400/10 to-accent/5 blur-3xl" />
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 text-accent text-[13px] font-bold mb-10 rounded-full tracking-wide uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 text-accent text-[13px] font-bold mb-12 rounded-full tracking-wide uppercase">
               <Zap className="w-3.5 h-3.5" />
-              <span>The Future of Staffing Growth</span>
+              <span>Inbound Demand for Staffing Firms</span>
             </div>
           </Reveal>
           
           <Reveal delay={100}>
-            <h1 className="text-[64px] md:text-[92px] font-bold text-text-primary leading-[0.95] tracking-tight mb-10">
-              The search for staffing <br className="hidden md:block" />
-              <span className="font-display text-accent">has shifted.</span>
+            <h1 className="text-[56px] md:text-[82px] lg:text-[92px] font-display font-medium text-text-primary leading-[1.02] mb-12 tracking-tight">
+              Your <span className="text-accent">agency&apos;s</span> operating <br />
+              system for{' '}
+              <PlatformLogoRotator />
             </h1>
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="text-[20px] md:text-[24px] text-text-secondary mb-14 max-w-[800px] mx-auto leading-relaxed font-medium">
-              Google is for ads. AI is for answers. <br className="hidden md:block" />
-              Cited builds your authority so you're the first choice when clients <br className="hidden md:block" />
-              ask ChatGPT, Claude, and Perplexity for a staffing partner.
+            <p className="text-[20px] md:text-[24px] text-text-secondary mb-16 max-w-[920px] mx-auto leading-[1.6] font-medium text-balance">
+              We help your staffing agency show up when hiring managers search on AI platforms. When your agency gets shown, you get more inbound leads.
             </p>
           </Reveal>
 
           <Reveal delay={300}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link to="/book-demo" className="btn-primary w-full sm:w-auto px-12 h-16 text-[17px] font-bold shadow-2xl shadow-accent/20">
-                Build Your Inbound Engine
-              </Link>
-              <Link to="/how-it-works" className="btn-secondary h-16 px-12 text-[17px] w-full sm:w-auto font-bold">
-                See the 6-Agent Swarm
-              </Link>
-            </div>
+            <form
+              action="https://formspree.io/f/mqakpjne"
+              method="POST"
+              className="mx-auto max-w-[820px] w-full"
+            >
+              <input type="text" name="_gotcha" style={{ display: 'none' }} />
+              <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
+              <div className="flex flex-col sm:flex-row items-stretch gap-3 rounded-[30px] border border-accent/20 bg-white/88 p-3 shadow-[0_25px_80px_rgba(79,70,229,0.14)] backdrop-blur-xl ring-1 ring-white/70">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="h-14 flex-1 rounded-[22px] border border-transparent bg-gradient-to-br from-bg-surface to-accent/5 px-5 text-[16px] text-text-primary outline-none transition-all placeholder:text-text-muted focus:border-accent"
+                  placeholder="Enter your business email"
+                />
+                <button
+                  type="submit"
+                  className="h-14 whitespace-nowrap rounded-[22px] bg-accent px-8 text-[16px] font-bold text-white shadow-xl shadow-accent/25 transition-all hover:scale-[1.01] hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30"
+                >
+                  Get Early Access
+                </button>
+              </div>
+              <p className="mt-7 text-[14px] font-medium text-text-muted">
+                800+ staffing agencies have already registered for early access.
+              </p>
+            </form>
           </Reveal>
 
-          {/* Conceptual Visual */}
-          <Reveal delay={500} className="mt-32">
-            <div className="relative max-w-[1000px] mx-auto">
-              <div className="absolute -inset-10 bg-accent/5 blur-[120px] rounded-full" />
-              <div className="bento-card p-12 bg-white/80 backdrop-blur-xl border-border-subtle relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-left">
-                  <div className="space-y-6">
-                    <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400">
-                      <Search className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="text-[14px] font-bold text-text-muted uppercase tracking-widest mb-2">The Old Way</h4>
-                      <p className="text-text-secondary font-medium leading-relaxed">
-                        Paying for clicks on Google. Competing with job boards. 
-                        Zero long-term authority.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="space-y-6 md:border-x border-border-subtle md:px-16">
-                    <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent">
-                      <Zap className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="text-[14px] font-bold text-accent uppercase tracking-widest mb-2">The Cited Way</h4>
-                      <p className="text-text-primary font-bold leading-relaxed">
-                        Building an autonomous inbound engine. 
-                        Being cited as the top choice by AI.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-500">
-                      <BarChart3 className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="text-[14px] font-bold text-emerald-600 uppercase tracking-widest mb-2">The Result</h4>
-                      <p className="text-text-secondary font-medium leading-relaxed">
-                        High-intent inbound leads. 
-                        Hiring managers coming directly to you.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </Section>
 
       {/* THE SHIFT NARRATIVE */}
-      <Section className="py-40 bg-text-primary text-white overflow-hidden relative">
+      <Section className="pt-10 pb-20 md:pt-12 md:pb-24 bg-text-primary text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
         <div className="container-custom relative z-10">
           <div className="max-w-[800px]">
             <Reveal>
-              <h2 className="text-[48px] md:text-[72px] font-bold leading-[1] tracking-tight mb-12">
-                Hiring managers are <br />
-                <span className="font-display text-accent">no longer searching.</span>
+              <h2 className="text-[48px] md:text-[72px] font-bold leading-[1] tracking-tight mb-8 md:mb-10">
+                Hiring managers shortlist firms <br />
+                <span className="font-display text-accent">before they ever reach out.</span>
               </h2>
-              <p className="text-[20px] md:text-[26px] text-slate-400 leading-relaxed mb-16 font-medium">
-                They are asking. They go to ChatGPT, Claude, and Perplexity to find 
-                specialized staffing partners. If you aren't being cited, you don't exist.
+              <p className="text-[20px] md:text-[26px] text-slate-400 leading-relaxed mb-10 md:mb-12 font-medium">
+                Staffing buyers now use AI search tools to compare recruiting firms, specialty staffing partners, and executive search providers. If your site is not built around the roles, verticals, and locations they are asking about, you lose the conversation before your team even gets a call.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-4">
-                  <div className="text-accent font-bold text-[32px]">82%</div>
-                  <p className="text-slate-400 font-medium">Of B2B buyers now use AI search for vendor discovery.</p>
+                  <div className="text-accent font-bold text-[32px]">24/7</div>
+                  <p className="text-slate-400 font-medium">Your site keeps attracting staffing demand while your recruiters are working live searches.</p>
                 </div>
                 <div className="space-y-4">
-                  <div className="text-accent font-bold text-[32px]">0.0s</div>
-                  <p className="text-slate-400 font-medium">Latency in your inbound engine. It works while you sleep.</p>
+                  <div className="text-accent font-bold text-[32px]">1 engine</div>
+                  <p className="text-slate-400 font-medium">One system for service pages, vertical pages, geo pages, trust signals, and lead capture.</p>
                 </div>
               </div>
             </Reveal>
@@ -123,28 +97,27 @@ export const Home: React.FC = () => {
       </Section>
 
       {/* THE ENGINE - 6 AGENTS */}
-      <Section className="py-40">
+      <Section className="py-20 md:py-24">
         <div className="container-custom">
-          <div className="text-center mb-32">
+          <div className="text-center mb-14 md:mb-16">
             <Reveal>
               <h2 className="text-[48px] md:text-[64px] font-bold text-text-primary mb-8 tracking-tight">
-                The <span className="font-display">Authority</span> Engine
+                How Cognivo helps <span className="font-display">staffing firms get found</span>
               </h2>
               <p className="text-[20px] text-text-secondary max-w-[700px] mx-auto font-medium">
-                We don't just "do SEO." We deploy a swarm of six specialized AI agents 
-                to map your expertise and build your web authority.
+                We do not sell generic SEO retainers. We build the specialty, location, service-line, and proof-point pages your staffing firm needs to get cited and recommended across AI search platforms.
               </p>
             </Reveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Memory Agent", desc: "Maps your agency's unique DNA, past successes, and vertical expertise.", icon: <Users /> },
-              { title: "Research Agent", desc: "Identifies the exact intent-based searches your ideal clients are making.", icon: <Search /> },
-              { title: "Content Agent", desc: "Creates authoritative landing zones that answer complex hiring questions.", icon: <Zap /> },
-              { title: "Publishing Agent", desc: "Distributes your expertise across the web to build trust signals.", icon: <Globe /> },
-              { title: "Authority Agent", desc: "Ensures you are cited as the top choice by AI search engines.", icon: <Shield /> },
-              { title: "Optimization Agent", desc: "Continuously refines your engine based on inbound lead conversion.", icon: <BarChart3 /> }
+              { title: "Signal Core", desc: "Maps your staffing firm’s specialties, placements, geographies, proof points, and ideal client profile.", icon: <Users /> },
+              { title: "Market Scout", desc: "Finds the actual searches hiring managers and talent leaders use when they need recruiting help.", icon: <Search /> },
+              { title: "Story Forge", desc: "Creates service, vertical, city, and solution pages in language staffing buyers immediately understand.", icon: <Zap /> },
+              { title: "Launchpad", desc: "Publishes and structures those pages so AI search platforms can crawl, index, and trust them quickly.", icon: <Globe /> },
+              { title: "Trust Layer", desc: "Builds the signals that make your staffing firm look credible in competitive recruiting markets.", icon: <Shield /> },
+              { title: "Growth Loop", desc: "Tracks which pages bring qualified reqs and doubles down on the searches that convert.", icon: <BarChart3 /> }
             ].map((agent, i) => (
               <Reveal key={i} delay={i * 100}>
                 <div className="bento-card p-10 h-full group">
@@ -163,91 +136,83 @@ export const Home: React.FC = () => {
       </Section>
 
       {/* THE RESULT - INBOUND LEADS */}
-      <Section background="surface" className="py-40">
+      <Section background="surface" className="py-20 md:py-24">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <div className="max-w-[1100px] mx-auto">
             <Reveal>
-              <h2 className="text-[48px] md:text-[64px] font-bold text-text-primary mb-10 leading-[1.1] tracking-tight">
-                Inbound leads, <br />
-                <span className="font-display text-accent">not cold calls.</span>
-              </h2>
-              <p className="text-[20px] text-text-secondary mb-12 leading-relaxed font-medium">
-                When you are cited as the authority, the power dynamic shifts. 
-                Hiring managers come to you pre-sold on your expertise. 
-                No more chasing. No more cold outreach.
-              </p>
-              <div className="space-y-8">
-                {[
-                  "Be the first choice in AI search results",
-                  "Own high-intent search clusters in your niche",
-                  "Build a long-term asset that compounds over time",
-                  "Get cited by the most trusted platforms on the web"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center text-accent">
-                      <Zap className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-[18px] font-bold text-text-primary tracking-tight">{item}</span>
-                  </div>
-                ))}
+              <div className="text-center mb-14 md:mb-16">
+                <h2 className="text-[48px] md:text-[64px] font-bold text-text-primary mb-8 leading-[1.1] tracking-tight">
+                  The longer it runs, <br />
+                  <span className="font-display text-accent">the stronger it gets.</span>
+                </h2>
+                <p className="text-[20px] text-text-secondary max-w-[760px] mx-auto leading-relaxed font-medium">
+                  New niche pages go live, trust signals build up, old pages improve, and more hiring-manager searches point back to your firm. The result is a steadier stream of qualified inbound conversations.
+                </p>
               </div>
             </Reveal>
-            <Reveal delay={200}>
-              <div className="bento-card p-12 bg-white shadow-2xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-12">
-                    <h4 className="text-[14px] font-bold text-text-muted uppercase tracking-widest">Inbound Pipeline</h4>
-                    <div className="px-3 py-1 bg-emerald-50 text-emerald-600 text-[12px] font-bold rounded-full">+240% Growth</div>
-                  </div>
-                  <div className="space-y-8">
+
+            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
+              <Reveal delay={100}>
+                <div className="bento-card p-10 md:p-12 bg-white/90 shadow-xl">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {[
-                      { label: "AI Citations", val: "842", color: "bg-accent" },
-                      { label: "Inbound Inquiries", val: "28", color: "bg-text-primary" },
-                      { label: "Market Authority", val: "92%", color: "bg-text-primary" }
-                    ].map((row, i) => (
-                      <div key={i} className="space-y-3">
-                        <div className="flex justify-between items-end">
-                          <span className="text-[14px] font-bold text-text-secondary">{row.label}</span>
-                          <span className="text-[24px] font-bold text-text-primary">{row.val}</span>
+                      "Own high-intent searches around roles, specialties, and locations",
+                      "Capture demand from ChatGPT, Claude, Perplexity, Gemini, and Grok",
+                      "Build a long-term asset instead of renting attention with ads",
+                      "Turn visibility into qualified staffing conversations your team can close"
+                    ].map((item, i) => (
+                      <div key={i} className="rounded-[28px] border border-black/5 bg-bg-surface p-6">
+                        <div className="w-10 h-10 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-5">
+                          <Zap className="w-4 h-4" />
                         </div>
-                        <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
-                          <motion.div 
-                            initial={{ width: 0 }}
-                            whileInView={{ width: '100%' }}
-                            transition={{ duration: 1.5, delay: i * 0.2 }}
-                            className={cn("h-full", row.color)} 
-                          />
-                        </div>
+                        <p className="text-[18px] font-bold text-text-primary leading-relaxed tracking-tight">{item}</p>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+
+              <Reveal delay={200}>
+                <div className="space-y-5">
+                  {[
+                    { value: "84", label: "Published pages live across niche, role, and geo searches" },
+                    { value: "28", label: "Qualified inbound conversations generated from AI discovery" },
+                    { value: "92%", label: "Coverage across your highest-intent search themes" }
+                  ].map((stat, i) => (
+                    <div key={i} className="rounded-[30px] border border-black/5 bg-white p-8 shadow-lg shadow-black/5">
+                      <div className="text-[44px] md:text-[52px] font-display font-medium text-accent leading-none tracking-tight mb-3">
+                        {stat.value}
+                      </div>
+                      <p className="text-[16px] text-text-secondary leading-relaxed font-medium">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </Section>
 
       {/* FINAL CTA */}
-      <Section background="grid" className="py-48">
+      <Section background="grid" className="py-20 md:py-24">
         <div className="max-w-[900px] mx-auto text-center">
           <Reveal>
             <h2 className="text-[56px] md:text-[80px] font-bold text-text-primary mb-10 leading-[1] tracking-tight">
-              Ready to be <br />
-              <span className="font-display text-accent underline decoration-accent/20 underline-offset-8">Cited?</span>
+              Ready to turn your site <br />
+              <span className="font-display text-accent underline decoration-accent/20 underline-offset-8">into an inbound engine?</span>
             </h2>
             <p className="text-[22px] text-text-secondary mb-14 max-w-[600px] mx-auto font-medium">
-              Join the elite staffing agencies building the future of inbound. 
-              Get a free authority audit today.
+              We will show you where your staffing firm stands today, what hiring managers are searching for, and what your site needs to generate more inbound reqs from search.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/free-audit" className="btn-primary px-16 h-16 text-[18px] font-bold shadow-2xl shadow-accent/20">
-                Get My Free Audit
+                Get My Free Inbound Audit
               </Link>
             </div>
             <p className="mt-10 text-[13px] text-text-muted font-bold tracking-widest uppercase">
-              Limited to 5 agencies per vertical per month
+              Limited to 5 staffing firms per specialty per month
             </p>
           </Reveal>
         </div>

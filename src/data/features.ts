@@ -13,67 +13,67 @@ export interface FeatureData {
 export const features: FeatureData[] = [
   {
     id: 'lead-engine',
-    title: 'Inbound Lead Engine',
-    description: 'We build a dedicated page on your website for every high-value search your ideal clients make. Not blog posts, but purpose-built landing zones.',
+    title: 'Staffing Demand Engine',
+    description: 'We build dedicated pages for the role, specialty, and location searches your ideal staffing buyers are already making. Not filler blog posts, but conversion-ready staffing pages.',
     icon: React.createElement(Globe),
     benefits: [
-      '100+ high-converting pages generated automatically',
-      'Targets specific hiring manager intent',
-      'Zero maintenance required from your team',
-      'Built-in conversion optimization'
+      '100+ specialty, city, and service pages generated automatically',
+      'Targets specific hiring-manager intent',
+      'Minimal lift required from your recruiting team',
+      'Built-in conversion paths for staffing inquiries'
     ],
-    howItWorks: 'Our Research Agent identifies the exact keywords hiring managers use. The Content Agent then builds authoritative pages that answer those queries and drive inquiries.'
+    howItWorks: 'Market Scout identifies the exact searches hiring managers use. Story Forge then builds staffing-specific pages that answer those queries and drive qualified inbound conversations.'
   },
   {
     id: 'ai-visibility',
-    title: 'AI Visibility System',
-    description: 'Show up when companies ask ChatGPT, Perplexity, or Claude who to call for their staffing needs.',
+    title: 'AI Search Visibility',
+    description: 'Show up when companies ask ChatGPT, Perplexity, Claude, or Gemini which staffing firm they should talk to.',
     icon: React.createElement(Target),
     benefits: [
-      'Dominate the "AI Answer" results',
+      'Win more "best staffing firm" answer surfaces',
       'Verified presence across all major LLMs',
       'Continuous optimization for evolving AI models',
       'Future-proof your agency\'s discoverability'
     ],
-    howItWorks: 'Our agents build a network of trust signals and verified data that AI models use to recommend businesses. We make sure your agency is the one they suggest.'
+    howItWorks: 'Our systems build the trust signals and supporting pages AI models use to recommend staffing firms. We make sure your agency is positioned as the one they suggest.'
   },
   {
     id: 'leads-dashboard',
-    title: 'Leads Dashboard',
-    description: 'A clear, real-time view of your inbound pipeline. No vanity metrics, just qualified inquiries.',
+    title: 'Inbound Pipeline Dashboard',
+    description: 'A clear, real-time view of your inbound staffing pipeline. No vanity metrics, just qualified conversations and placements in motion.',
     icon: React.createElement(Zap),
     benefits: [
-      'Real-time lead notifications',
+      'Real-time staffing lead notifications',
       'Detailed lead source tracking',
       'CRM integration ready',
-      'Conversion rate analytics'
+      'Placement funnel analytics'
     ],
-    howItWorks: 'Every inquiry is captured and analyzed. You see exactly which search led to which client, allowing you to measure true ROI.'
+    howItWorks: 'Every inquiry is captured and analyzed. You see exactly which search led to which conversation, so you can measure true ROI from inbound staffing demand.'
   },
   {
     id: 'authority-builder',
-    title: 'Authority Builder',
-    description: 'The trust signals that make hiring managers choose you over competitors. We build your reputation automatically.',
+    title: 'Trust Signal Builder',
+    description: 'The trust signals that make hiring managers choose your staffing firm over competitors. We strengthen your reputation automatically.',
     icon: React.createElement(Shield),
     benefits: [
-      'Automated directory management',
+      'Automated staffing directory management',
       'Verified trust signal generation',
-      'Consistent brand voice across platforms',
-      'Enhanced local SEO authority'
+      'Consistent positioning across platforms',
+      'Stronger authority in local and niche recruiting searches'
     ],
-    howItWorks: 'The Authority Agent identifies and manages your presence on industry-specific directories and platforms, building a wall of trust around your brand.'
+    howItWorks: 'Trust Layer identifies and manages your presence on industry-specific directories and platforms, building a wall of trust around your staffing firm.'
   },
   {
     id: 'analytics',
-    title: 'Performance Analytics',
-    description: 'Deep insights into your market and your performance. Know exactly where your growth is coming from.',
+    title: 'Market Performance Analytics',
+    description: 'Deep insights into your staffing market and your performance. Know exactly which specialties, cities, and searches are driving growth.',
     icon: React.createElement(BarChart3),
     benefits: [
-      'Market share tracking',
+      'Search-share tracking by specialty',
       'Competitor visibility analysis',
-      'Keyword performance reports',
-      'Predictable growth forecasting'
+      'Page and keyword performance reporting',
+      'More predictable growth forecasting'
     ],
-    howItWorks: 'The Optimization Agent monitors every page and every search. It provides you with actionable data on how to further dominate your market.'
+    howItWorks: 'Growth Loop monitors every page and every search cluster. It gives you actionable data on where to expand next in your staffing market.'
   }
 ];

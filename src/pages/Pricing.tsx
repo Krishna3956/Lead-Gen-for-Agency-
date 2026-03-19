@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const PLANS = [
   {
     name: 'Foundation',
-    desc: 'Validate your inbound channel',
+    desc: 'Start winning one specialty or market',
     inc: [
       '30 specialized pages',
       '1 target city',
@@ -15,13 +15,13 @@ const PLANS = [
       'Monthly performance report',
       'Standard AI agent reasoning'
     ],
-    monthly: 500,
+    monthly: 250,
     btn: 'Start Foundation',
     type: 'secondary'
   },
   {
     name: 'Growth',
-    desc: 'Build a consistent inbound pipeline',
+    desc: 'Build a steady flow of qualified staffing inquiries',
     inc: [
       '60 specialized pages',
       '2 target cities',
@@ -30,14 +30,14 @@ const PLANS = [
       'Weekly performance report',
       'Priority agent reasoning'
     ],
-    monthly: 900,
+    monthly: 450,
     btn: 'Start Growth',
     type: 'primary',
     popular: true
   },
   {
     name: 'Dominate',
-    desc: 'Own your market completely',
+    desc: 'Own multiple specialties and cities',
     inc: [
       '100+ specialized pages',
       '4 target cities',
@@ -46,7 +46,7 @@ const PLANS = [
       'Real-time lead alerts',
       'Custom agent workflows'
     ],
-    monthly: 1500,
+    monthly: 750,
     btn: 'Start Dominate',
     type: 'secondary'
   }
@@ -54,23 +54,19 @@ const PLANS = [
 
 export const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(true);
+  const [selectedPlan, setSelectedPlan] = useState('Growth');
 
   return (
-    <div className="pt-20">
+    <div className="pt-10">
       {/* HERO */}
-      <Section className="pb-24 pt-20">
+      <Section className="pb-6 pt-6 md:pb-8 md:pt-8">
         <div className="max-w-[800px] mx-auto text-center">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
-              <TrendingUp className="w-3 h-3" />
-              <span className="uppercase">Pricing & ROI</span>
-            </div>
-            <h1 className="text-[56px] md:text-[80px] font-display font-medium text-text-primary leading-[1.05] mb-8 tracking-tight">
-              Clear pricing. <br /><span className="italic text-accent">No surprises.</span>
+            <h1 className="text-[56px] md:text-[80px] font-display font-medium text-text-primary leading-[1.05] mb-4 tracking-tight">
+              Pick the growth plan <br /><span className="italic text-accent">for your staffing firm.</span>
             </h1>
-            <p className="text-[20px] md:text-[22px] text-text-secondary max-w-[600px] mx-auto leading-relaxed mb-12">
-              Month to month after your first term. Cancel any time.
-              Full refund if no results in six months.
+            <p className="text-[20px] md:text-[22px] text-text-secondary max-w-[600px] mx-auto leading-relaxed mb-5">
+              Every plan helps your staffing firm win more high-intent visibility across ChatGPT, Claude, Perplexity, Gemini, and other AI search platforms. Choose how aggressively you want to expand coverage across specialties, cities, and service lines.
             </p>
           </Reveal>
 
@@ -101,35 +97,48 @@ export const Pricing: React.FC = () => {
 
       {/* CARDS */}
       <Section className="py-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1200px] mx-auto">
           {PLANS.map((plan, i) => {
             const price = isAnnual ? Math.round(plan.monthly * 0.8) : plan.monthly;
+            const isSelected = selectedPlan === plan.name;
             return (
               <Reveal key={i} delay={i * 100}>
-                <div className={cn(
-                  "relative h-full flex flex-col p-10 border rounded-[40px] transition-all duration-500",
-                  plan.popular 
-                    ? "bg-white border-accent shadow-[0_20px_50px_rgba(79,70,229,0.1)] scale-105 z-10" 
-                    : "bg-white border-black/5 hover:border-accent/30 hover:shadow-xl"
-                )}>
+                <button
+                  type="button"
+                  onClick={() => setSelectedPlan(plan.name)}
+                  className={cn(
+                    "relative h-full w-full flex flex-col p-6 md:p-7 border rounded-[40px] transition-all duration-500 text-left",
+                    isSelected
+                      ? "bg-white border-accent shadow-[0_20px_50px_rgba(79,70,229,0.14)] scale-[1.02] z-10"
+                      : plan.popular
+                        ? "bg-white border-accent/60 shadow-[0_20px_50px_rgba(79,70,229,0.08)]"
+                        : "bg-white border-black/5 hover:border-accent/30 hover:shadow-xl"
+                  )}
+                >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-[10px] font-bold uppercase tracking-widest px-5 py-2 rounded-full shadow-lg">
                       Most Popular
                     </div>
                   )}
+
+                  {isSelected && (
+                    <div className="absolute top-5 right-5 bg-accent text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
+                      Selected
+                    </div>
+                  )}
                   
-                  <div className="mb-8">
+                  <div className="mb-4">
                     <h3 className="text-[24px] font-display font-medium text-text-primary mb-2 tracking-tight">{plan.name}</h3>
                     <p className="text-[15px] text-text-secondary leading-relaxed">{plan.desc}</p>
                   </div>
 
-                  <div className="mb-8 flex items-baseline gap-2">
+                  <div className="mb-4 flex items-baseline gap-2">
                     <span className="text-[48px] font-display font-medium text-text-primary tracking-tight">${price}</span>
                     <span className="text-text-secondary text-[16px] font-medium">/mo</span>
                   </div>
 
                   <Link to="/book-demo" className={cn(
-                    "w-full py-4 font-bold text-[15px] mb-10 transition-all flex items-center justify-center gap-2 rounded-2xl",
+                    "w-full py-3.5 font-bold text-[15px] mb-5 transition-all flex items-center justify-center gap-2 rounded-2xl",
                     plan.type === 'primary' 
                       ? "btn-primary" 
                       : "bg-black/5 text-text-primary border border-transparent hover:border-accent/30 shadow-sm"
@@ -148,7 +157,7 @@ export const Pricing: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </button>
               </Reveal>
             );
           })}
@@ -156,39 +165,41 @@ export const Pricing: React.FC = () => {
       </Section>
 
       {/* ROI CALCULATOR */}
-      <ROICalculator />
+      <ROICalculator
+        selectedPlan={selectedPlan}
+        selectedPlanPrice={(isAnnual ? Math.round(PLANS.find((plan) => plan.name === selectedPlan)!.monthly * 0.8) : PLANS.find((plan) => plan.name === selectedPlan)!.monthly)}
+      />
 
       {/* GUARANTEE */}
-      <Section className="py-24">
+      <Section className="py-16 md:py-20">
         <div className="max-w-[1000px] mx-auto">
           <Reveal>
-            <div className="bg-white border border-black/5 p-12 md:p-20 rounded-[40px] shadow-sm relative overflow-hidden">
+            <div className="bg-white border border-black/5 p-10 md:p-14 rounded-[40px] shadow-sm relative overflow-hidden">
               <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 blur-[120px] -mr-48 -mt-48 rounded-full" />
-              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
                     <Shield className="w-3 h-3" />
-                    <span className="uppercase">Guarantee</span>
+                <span className="uppercase">Guarantee</span>
                   </div>
-                  <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-8 leading-[1.1] tracking-tight">
-                    The six-month <br /><span className="italic text-accent">inquiry guarantee.</span>
+                  <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-6 leading-[1.1] tracking-tight">
+                    Built for staffing firms that want <br /><span className="italic text-accent">qualified inbound, not more chasing.</span>
                   </h2>
-                  <p className="text-[18px] md:text-[20px] text-text-secondary mb-10 leading-relaxed max-w-[440px]">
-                    If you do not receive a single qualified client inquiry in six months,
-                    you get every dollar back. No questions asked.
+                  <p className="text-[18px] md:text-[20px] text-text-secondary mb-8 leading-relaxed max-w-[440px]">
+                    We are not selling isolated pages or one-off SEO tasks. We are building a staffing-specific growth system that gets stronger with every publish cycle, update, and trust signal.
                   </p>
                   <div className="flex items-center gap-3 text-accent font-bold tracking-wide text-[14px] uppercase">
                     <Check className="w-5 h-5" />
-                    <span>Contractually Guaranteed</span>
+                    <span>Structured for long-term growth</span>
                   </div>
                 </div>
-                <div className="bg-black/5 border border-transparent p-10 rounded-[32px]">
+                <div className="bg-black/5 border border-transparent p-8 rounded-[32px]">
                   <div className="flex items-center gap-3 mb-6">
                     <Info className="w-5 h-5 text-accent" />
-                    <h4 className="font-bold text-text-primary uppercase text-[11px] tracking-widest">EXACT DEFINITION</h4>
+                    <h4 className="font-bold text-text-primary uppercase text-[11px] tracking-widest">WHAT YOU'RE FUNDING</h4>
                   </div>
                   <p className="text-[16px] text-text-secondary leading-relaxed font-medium">
-                    A qualified inquiry is a contact form submission from a company (not a job seeker) expressing interest in using your agency's services. This definition is written into your contract before you pay anything. There is no ambiguity at month six.
+                    Each plan funds the same core loop: specialty mapping, search opportunity discovery, page creation, publishing, trust building, and performance optimization. The difference is how much market coverage and momentum you want.
                   </p>
                 </div>
               </div>
@@ -200,36 +211,42 @@ export const Pricing: React.FC = () => {
   );
 };
 
-const ROICalculator = () => {
+const ROICalculator = ({
+  selectedPlan,
+  selectedPlanPrice,
+}: {
+  selectedPlan: string;
+  selectedPlanPrice: number;
+}) => {
   const [clientValue, setClientValue] = useState(50000);
   const [newClients, setNewClients] = useState(5);
   const [convRate, setConvRate] = useState(20);
 
   const annualRevenue = clientValue * newClients;
-  const investment = 900 * 12; // Growth plan
+  const investment = selectedPlanPrice * 12;
   const roi = (annualRevenue / investment).toFixed(1);
 
   return (
-    <Section className="py-24 bg-black/5 border-y border-black/5">
+    <Section className="py-16 md:py-20 bg-black/5 border-y border-black/5">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 md:gap-16 items-center">
           <div>
             <Reveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
                 <Calculator className="w-3 h-3" />
-                <span className="uppercase">ROI Calculator</span>
+                <span className="uppercase">{selectedPlan} ROI Calculator</span>
               </div>
-              <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-8 leading-[1.1] tracking-tight">
-                What is one new client <br />worth to your agency?
+              <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-6 leading-[1.1] tracking-tight">
+                What is one more <br />placement worth to your firm?
               </h2>
-              <p className="text-[18px] md:text-[20px] text-text-secondary mb-16 leading-relaxed max-w-[500px]">
-                Adjust the numbers to match your agency's economics and see the potential impact of an inbound engine.
+              <p className="text-[18px] md:text-[20px] text-text-secondary mb-10 leading-relaxed max-w-[500px]">
+                Adjust the inputs to see what happens when stronger search visibility starts producing more qualified hiring conversations instead of forcing your team to rely on outbound alone.
               </p>
 
-              <div className="space-y-12">
+              <div className="space-y-10">
                 <div className="space-y-6">
                   <div className="flex justify-between items-center">
-                    <label className="text-[12px] font-bold text-text-primary uppercase tracking-widest">Average Annual Client Value</label>
+                    <label className="text-[12px] font-bold text-text-primary uppercase tracking-widest">Average Placement Value</label>
                     <span className="text-accent font-display font-medium text-[28px] tracking-tight">${clientValue.toLocaleString()}</span>
                   </div>
                   <input
@@ -245,7 +262,7 @@ const ROICalculator = () => {
 
                 <div className="space-y-6">
                   <div className="flex justify-between items-center">
-                    <label className="text-[12px] font-bold text-text-primary uppercase tracking-widest">New Clients Per Year</label>
+                    <label className="text-[12px] font-bold text-text-primary uppercase tracking-widest">New Placements Per Year</label>
                     <span className="text-accent font-display font-medium text-[28px] tracking-tight">{newClients}</span>
                   </div>
                   <input
@@ -260,7 +277,7 @@ const ROICalculator = () => {
 
                 <div className="space-y-6">
                   <div className="flex justify-between items-center">
-                    <label className="text-[12px] font-bold text-text-primary uppercase tracking-widest">Conversion Rate</label>
+                    <label className="text-[12px] font-bold text-text-primary uppercase tracking-widest">Lead To Placement Rate</label>
                     <span className="text-accent font-display font-medium text-[28px] tracking-tight">{convRate}%</span>
                   </div>
                   <input
@@ -277,32 +294,32 @@ const ROICalculator = () => {
           </div>
 
           <Reveal delay={200}>
-            <div className="bg-white border border-black/5 p-12 md:p-16 rounded-[40px] shadow-2xl shadow-black/5 relative overflow-hidden">
+            <div className="bg-white border border-black/5 p-10 md:p-12 rounded-[40px] shadow-2xl shadow-black/5 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32" />
-              <div className="relative z-10 space-y-12">
+              <div className="relative z-10 space-y-10">
                 <div>
                   <span className="text-[11px] font-bold text-text-muted tracking-widest uppercase mb-4 block">Expected New Annual Revenue</span>
                   <div className="text-[64px] md:text-[80px] font-display font-medium text-text-primary tracking-tighter leading-none">${annualRevenue.toLocaleString()}</div>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-10 pt-10 border-t border-black/5">
+                <div className="grid grid-cols-2 gap-8 pt-8 border-t border-black/5">
                   <div>
                     <span className="text-[11px] font-bold text-text-muted tracking-widest uppercase mb-3 block">Annual Investment</span>
                     <div className="text-[24px] font-display font-medium text-text-secondary tracking-tight">${investment.toLocaleString()}</div>
                   </div>
                   <div>
-                    <span className="text-[11px] font-bold text-text-muted tracking-widest uppercase mb-3 block">Client LTV</span>
+                  <span className="text-[11px] font-bold text-text-muted tracking-widest uppercase mb-3 block">Placement Value</span>
                     <div className="text-[24px] font-display font-medium text-text-secondary tracking-tight">${clientValue.toLocaleString()}</div>
                   </div>
                 </div>
 
-                <div className="pt-12 border-t border-black/5">
-                  <div className="flex items-baseline gap-4 mb-6">
+                <div className="pt-8 border-t border-black/5">
+                  <div className="flex items-baseline gap-4 mb-4">
                     <div className="text-[80px] font-display font-medium text-accent leading-none tracking-tighter">{roi}x</div>
                     <div className="text-[24px] font-display font-medium text-accent tracking-widest">ROI</div>
                   </div>
                   <p className="text-[18px] text-text-primary font-medium leading-relaxed">
-                    For every $1 invested in the Growth plan, your agency could generate <span className="text-accent font-bold">${roi}</span> in new revenue.
+                    For every $1 invested in the {selectedPlan} plan, your staffing firm could generate <span className="text-accent font-bold">${roi}</span> in placement revenue.
                   </p>
                 </div>
               </div>

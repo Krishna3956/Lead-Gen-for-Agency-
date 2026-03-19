@@ -13,15 +13,15 @@ export const FeatureDetail: React.FC = () => {
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-14">
       {/* HERO */}
-      <Section background="grid" className="pt-20 pb-32">
+      <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8">
-              <span>FEATURE DEEP DIVE</span>
+            <div className="page-chip mb-8">
+              <span className="uppercase">Feature deep dive</span>
             </div>
-            <h1 className="text-[48px] md:text-[72px] font-black text-text-primary leading-[1.1] mb-8 italic uppercase tracking-tighter">
+            <h1 className="page-title mb-8">
               {feature.title}
             </h1>
             <p className="text-[20px] text-text-secondary leading-relaxed mb-12">
@@ -40,10 +40,10 @@ export const FeatureDetail: React.FC = () => {
       </Section>
 
       {/* BENEFITS */}
-      <Section className="py-24 border-y border-border-subtle bg-bg-surface">
+      <Section className="py-16 md:py-20 border-y border-border-subtle bg-bg-surface">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <Reveal delay={100}>
-            <h3 className="text-[32px] font-black text-text-primary mb-8 italic uppercase tracking-tighter">Key Benefits</h3>
+            <h3 className="section-heading text-[32px] mb-8">Key Benefits</h3>
             <ul className="space-y-6">
               {feature.benefits.map((benefit, i) => (
                 <li key={i} className="flex items-start gap-4 text-text-secondary">
@@ -57,18 +57,17 @@ export const FeatureDetail: React.FC = () => {
           </Reveal>
 
           <Reveal delay={200} className="glass-card p-10 bg-bg-elevated border-border-strong">
-            <h3 className="text-[24px] font-bold text-text-primary mb-6 italic uppercase tracking-tighter">How It Works</h3>
+            <h3 className="card-heading text-[24px] mb-6">How It Works</h3>
             <p className="text-text-secondary text-[18px] leading-relaxed mb-8">
               {feature.howItWorks}
             </p>
-            <div className="p-6 bg-bg-base border border-border-subtle">
+            <div className="p-6 bg-bg-base border border-border-subtle rounded-[24px]">
               <div className="flex items-center gap-3 text-accent font-bold uppercase tracking-widest text-[12px] mb-4">
                 <Zap className="w-4 h-4" />
-                <span>AI AGENT INVOLVED</span>
+                <span>COGNIVO SYSTEM</span>
               </div>
               <p className="text-[14px] text-text-muted">
-                Our specialized agents work in a swarm to ensure this feature 
-                is always performing at its peak for your agency.
+                Our specialized systems work together to keep this feature performing at its peak for your staffing firm.
               </p>
             </div>
           </Reveal>
@@ -76,9 +75,9 @@ export const FeatureDetail: React.FC = () => {
       </Section>
 
       {/* OTHER FEATURES */}
-      <Section className="py-32">
+      <Section className="py-20 md:py-24">
         <div className="mb-12">
-          <h3 className="text-[24px] font-bold text-text-primary italic uppercase tracking-tighter">Explore Other Features</h3>
+          <h3 className="card-heading text-[24px]">Explore Other Features</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.filter(f => f.id !== id).map(f => (
@@ -87,7 +86,7 @@ export const FeatureDetail: React.FC = () => {
               to={`/features/${f.id}`}
               className="glass-card p-8 group hover:border-accent transition-all"
             >
-              <h4 className="text-[18px] font-bold text-text-primary mb-4 group-hover:text-accent transition-colors italic uppercase tracking-tighter">{f.title}</h4>
+              <h4 className="card-heading text-[18px] mb-4 group-hover:text-accent transition-colors">{f.title}</h4>
               <p className="text-[14px] text-text-secondary line-clamp-2 mb-6">{f.description}</p>
               <div className="flex items-center gap-2 text-accent text-[12px] font-bold uppercase tracking-widest">
                 Learn More <ArrowRight className="w-3 h-3" />
@@ -98,15 +97,14 @@ export const FeatureDetail: React.FC = () => {
       </Section>
 
       {/* CALL TO ACTION */}
-      <Section background="grid" className="py-32 border-t border-border-subtle">
+      <Section background="grid" className="py-20 md:py-24 border-t border-border-subtle">
         <div className="text-center">
           <Reveal>
-            <h3 className="text-[32px] md:text-[48px] font-black text-text-primary mb-8 italic uppercase tracking-tighter">
-              Ready to stop <span className="text-accent">cold calling?</span>
+            <h3 className="section-heading mb-8">
+              Ready to win more <span className="text-accent">inbound staffing demand?</span>
             </h3>
             <p className="text-[18px] text-text-secondary mb-12 max-w-[600px] mx-auto">
-              Get a free market audit and see exactly how many hiring managers 
-              are searching for your agency right now.
+              Get a free market audit and see exactly what hiring managers are searching for in your specialty right now.
             </p>
             <Link to="/free-audit" className="btn-primary px-12 h-14 text-[16px]">
               Get My Free Audit

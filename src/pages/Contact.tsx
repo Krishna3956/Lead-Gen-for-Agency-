@@ -5,25 +5,25 @@ import { Link } from 'react-router-dom';
 
 export const Contact: React.FC = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       {/* HERO */}
-      <Section className="pb-12">
+      <Section className="pb-10 md:pb-12">
         <div className="max-w-[800px]">
           <Reveal>
             <span className="text-[12px] font-semibold text-accent tracking-wide mb-6 block">CONTACT US</span>
-            <h1 className="text-[48px] md:text-[64px] font-bold text-text-primary mb-6 tracking-tight">Let's talk about your inbound engine.</h1>
+            <h1 className="text-[48px] md:text-[64px] font-bold text-text-primary mb-6 tracking-tight">Let's talk about growing your staffing firm.</h1>
             <p className="text-[20px] text-text-secondary leading-relaxed">
-              Whether you have questions about our AI agents or want to see a custom ROI projection for your agency, we're here to help.
+              Whether you want to win more searches for your niche, improve your staffing site, or see what inbound could look like for your firm, we are here to help.
             </p>
           </Reveal>
         </div>
       </Section>
 
-      <Section className="py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <Section className="py-12 md:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-14">
           {/* CONTACT FORM */}
           <Reveal>
-            <div className="bg-bg-surface border border-border-subtle p-8 md:p-12">
+            <div className="bg-bg-surface border border-border-subtle p-8 md:p-12 rounded-[32px]">
               <form 
                 action="https://formspree.io/f/mqakpjne" 
                 method="POST"
@@ -94,7 +94,7 @@ export const Contact: React.FC = () => {
                     required
                     rows={4}
                     className="w-full bg-bg-surface border border-border-subtle px-4 py-3 text-text-primary rounded-lg focus:outline-none focus:border-accent transition-all resize-none"
-                    placeholder="Tell us about your agency goals..."
+                    placeholder="Tell us about your specialty, geography, and growth goals..."
                   />
                 </div>
                 <button type="submit" className="btn-primary w-full h-12 flex items-center justify-center gap-2 font-bold">
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
           </Reveal>
 
           {/* CONTACT INFO */}
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-10">
             <Reveal delay={100}>
               <div className="space-y-8">
                 <h2 className="text-[28px] font-bold text-text-primary tracking-tight">Other ways to connect</h2>
@@ -117,12 +117,12 @@ export const Contact: React.FC = () => {
                   <div>
                     <h3 className="text-[16px] font-bold text-text-primary mb-1 tracking-tight">Email Us</h3>
                     <p className="text-text-secondary mb-2">For general inquiries and support.</p>
-                    <a href="mailto:hello@stafffound.com" className="text-accent font-medium hover:underline">hello@stafffound.com</a>
+                    <a href="mailto:hello@cognivo.com" className="text-accent font-medium hover:underline">hello@cognivo.com</a>
                   </div>
                 </div>
 
                 <div className="flex gap-6">
-                  <div className="w-12 h-12 bg-bg-surface border border-border-subtle flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-bg-surface border border-border-subtle rounded-xl flex items-center justify-center shrink-0">
                     <MessageSquare className="w-5 h-5 text-accent" />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex gap-6">
-                  <div className="w-12 h-12 bg-bg-surface border border-border-subtle flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-bg-surface border border-border-subtle rounded-xl flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-accent" />
                   </div>
                   <div>
@@ -146,10 +146,10 @@ export const Contact: React.FC = () => {
             </Reveal>
 
             <Reveal delay={200}>
-              <div className="bg-bg-elevated border border-border-subtle p-8">
+              <div className="bg-bg-elevated border border-border-subtle p-8 rounded-[32px]">
                 <h3 className="text-[18px] font-bold text-text-primary mb-4 uppercase tracking-tight">Looking for a demo?</h3>
-                <p className="text-text-secondary mb-6">
-                  Skip the form and book a direct 15-minute walkthrough with our product team.
+                    <p className="text-text-secondary mb-6">
+                  Skip the form and book a direct walkthrough focused on your staffing niche, current visibility, and growth goals.
                 </p>
                 <Link to="/book-demo" className="flex items-center gap-2 text-accent font-bold group uppercase tracking-widest text-sm">
                   Book Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

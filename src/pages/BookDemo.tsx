@@ -20,40 +20,40 @@ export const BookDemo: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 bg-bg-base min-h-screen">
-      <Section className="pb-32">
+    <div className="pt-16 bg-bg-base min-h-screen">
+      <Section className="pb-20 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Left Column: Content */}
           <div className="lg:col-span-5">
             <Reveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8">
                 <Zap className="w-3 h-3" />
-                Strategy Session
+                Inbound Audit
               </div>
               <h1 className="text-5xl md:text-6xl font-display text-text-primary mb-8 leading-[1.1] tracking-tight">
-                Secure your <br />
-                <span className="text-accent">Authority.</span>
+                See how your staffing firm wins <br />
+                <span className="text-accent">qualified inbound.</span>
               </h1>
               <p className="text-xl text-text-secondary mb-12 leading-relaxed">
-                Book a 30-minute deep dive with our authority specialists. We'll map your niche's AI search landscape and show you how <span className="text-text-primary font-semibold italic">Cited</span> builds your inbound engine.
+                Book a 30-minute working session with our team. We will map the searches hiring managers are making in your specialty, show where your firm is missing visibility, and walk through how <span className="text-text-primary font-semibold italic">Cognivo</span> would turn that into a repeatable inbound channel.
               </p>
 
               <div className="space-y-8 mb-12">
                 {[
                   {
                     icon: <Target className="w-5 h-5 text-accent" />,
-                    title: "Market Mapping",
-                    desc: "See exactly where your competitors are currently cited and where the gaps are."
+                    title: "Search Opportunity Map",
+                    desc: "See what hiring managers are asking ChatGPT, Claude, Perplexity, Gemini, and Grok in your specialty."
                   },
                   {
                     icon: <Shield className="w-5 h-5 text-accent" />,
-                    title: "Authority Audit",
-                    desc: "A live assessment of your agency's current standing in AI search engines."
+                    title: "Website Authority Audit",
+                    desc: "Get a direct assessment of how credible and discoverable your current staffing site looks to AI search platforms."
                   },
                   {
                     icon: <Zap className="w-5 h-5 text-accent" />,
-                    title: "Custom Roadmap",
-                    desc: "A step-by-step plan for deploying your 6-agent swarm."
+                    title: "Custom Rollout Plan",
+                    desc: "Leave with a clear plan for which staffing pages to publish, where to build trust, and how to generate more inbound reqs."
                   }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -71,8 +71,8 @@ export const BookDemo: React.FC = () => {
                   <Video className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-text-primary font-bold text-sm uppercase tracking-tight">Virtual Strategy Session</div>
-                  <div className="text-text-secondary text-xs">Conducted via Google Meet or Zoom</div>
+                  <div className="text-text-primary font-bold text-sm uppercase tracking-tight">Virtual Inbound Audit</div>
+                  <div className="text-text-secondary text-xs">Conducted via Zoom</div>
                 </div>
               </div>
             </Reveal>
@@ -277,4 +277,3 @@ export const BookDemo: React.FC = () => {
     </div>
   );
 };
-

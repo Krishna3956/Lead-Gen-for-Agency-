@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Why Cold Calling is Dying for Staffing Agencies',
     excerpt: 'Hiring managers are busier than ever. They don\'t answer unknown numbers. Here\'s how to reach them instead.',
     date: 'March 15, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       The era of the "smile and dial" staffing agency is over. 
       Hiring managers have become experts at filtering out noise. 
@@ -22,12 +22,12 @@ export const blogPosts: BlogPost[] = [
 
       So how do you reach them? You reach them when they are actively 
       searching for a solution. When a hiring manager has a critical 
-      opening, they don't wait for a cold call. They go to Google. 
-      They go to AI tools. They search for "staffing agency [city]" 
-      or "best recruiters for [role]."
+      opening, they do not wait for a cold call. They open AI tools. 
+      They ask for the best staffing firm in their city, the right 
+      recruiter for a role, or the best partner for a niche search.
 
       If you aren't there when they search, you don't exist. 
-      Staff Found builds the digital infrastructure that puts you 
+      Cognivo builds the digital infrastructure that puts you 
       exactly where the intent is highest.
     `
   },
@@ -36,9 +36,9 @@ export const blogPosts: BlogPost[] = [
     title: 'AI Search: The New Frontier for Staffing',
     excerpt: 'Hiring managers are asking ChatGPT for recruiting help. Are you the one it recommends?',
     date: 'March 10, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
-      SEO is no longer just about Google. AI tools like ChatGPT, 
+      Discovery is no longer centered around traditional search. AI tools like ChatGPT, 
       Perplexity, and Claude are becoming the primary search tools 
       for decision makers. 
 
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The ROI of Inbound Leads vs. Outbound Chasing',
     excerpt: 'Inbound leads close faster, pay higher fees, and stay longer. Here\'s the math behind it.',
     date: 'March 5, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       Not all leads are created equal. A lead generated from a cold 
       call starts with a low trust level. You are the "salesperson" 
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Building Authority in a Skeptical Staffing Market',
     excerpt: 'Hiring managers are tired of generic promises. Here\'s how to build real authority.',
     date: 'February 28, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       The staffing market is crowded and skeptical. Every agency 
       claims to have the "best talent" and the "fastest turnaround." 
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
       demonstrated expertise. It's built on being the source of 
       truth in your niche. 
 
-      Staff Found helps you build this authority by creating 
+      Cognivo helps you build this authority by creating 
       high-value content that actually helps hiring managers. 
       We position you as the expert who understands their 
       specific challenges, not just another vendor.
@@ -97,13 +97,13 @@ export const blogPosts: BlogPost[] = [
     title: 'Scaling Your Agency Without Hiring More Recruiters',
     excerpt: 'The traditional way to scale is to hire more people. The modern way is to use AI.',
     date: 'February 20, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       Most staffing agency founders think that to grow, they need 
       to hire more recruiters to make more calls. This is a 
       linear growth model with high overhead and high risk.
 
-      Staff Found offers an exponential growth model. By building 
+      Cognivo offers an exponential growth model. By building 
       an inbound lead engine, you can generate more business 
       without increasing your headcount. 
 
@@ -117,13 +117,13 @@ export const blogPosts: BlogPost[] = [
     title: 'The Future of Niche Recruiting',
     excerpt: 'Generalist agencies are being squeezed. Specialization is the only way to survive.',
     date: 'February 15, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       The "we do everything" agency is a dying breed. Hiring 
       managers want specialists who understand their industry, 
       their roles, and their culture.
 
-      Staff Found helps you dominate your niche by creating 
+      Cognivo helps you dominate your niche by creating 
       hyper-targeted content for specific roles and industries. 
       We make you the "big fish" in your specific pond.
 
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Optimizing Your Staffing Website for 2026',
     excerpt: 'Your website shouldn\'t be a digital brochure. It should be a lead generator.',
     date: 'February 10, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       Most staffing websites are digital brochures. They have 
       a "Services" page, an "About" page, and a "Contact" page. 
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
       high-value search. It needs to have clear trust signals 
       and a frictionless path to conversion.
 
-      Staff Found turns your existing website into a powerful 
+      Cognivo turns your existing website into a powerful 
       marketing asset that works for you 24/7.
     `
   },
@@ -157,13 +157,13 @@ export const blogPosts: BlogPost[] = [
     title: 'How to Outrank National Agencies in Your Local Market',
     excerpt: 'You don\'t need a million-dollar budget to beat the big guys. You just need to be smarter.',
     date: 'February 5, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       National staffing agencies have massive marketing budgets, 
       but they are often slow and generic. They can't compete 
       with the specialized, local expertise of a boutique agency.
 
-      Staff Found helps you leverage your local advantage. 
+      Cognivo helps you leverage your local advantage. 
       We build hyper-local content that outranks the generic 
       pages of national competitors. 
 
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Psychology of Hiring Managers: What Makes Them Click?',
     excerpt: 'Understanding the pain points of your ideal client is the key to conversion.',
     date: 'January 30, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       Hiring managers are under immense pressure. They have 
       critical roles to fill, limited time, and a constant 
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
       pain points. You need to show them that you understand 
       their world and that you have a proven solution.
 
-      Staff Found uses deep market research to create content 
+      Cognivo uses deep market research to create content 
       that resonates with the psychology of hiring managers. 
       We don't just sell services; we offer relief from their 
       biggest headaches.
@@ -198,13 +198,13 @@ export const blogPosts: BlogPost[] = [
     title: 'Leveraging AI for Staffing Growth: A Founder\'s Guide',
     excerpt: 'AI is the biggest opportunity for staffing agencies in a decade. Here\'s how to use it.',
     date: 'January 25, 2026',
-    author: 'Staff Found Team',
+    author: 'Cognivo Team',
     content: `
       AI is not a threat to recruiters; it's a superpower. 
       The agencies that embrace AI will thrive, while those 
       that resist it will be left behind.
 
-      Staff Found is the ultimate AI tool for staffing agency 
+      Cognivo is the ultimate AI tool for staffing agency 
       founders. We handle the technical, time-consuming 
       work of marketing and lead generation, so you can 
       focus on what you do best: building relationships 

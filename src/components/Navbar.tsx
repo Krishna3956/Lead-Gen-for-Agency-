@@ -21,17 +21,15 @@ export const Navbar: React.FC = () => {
       )}
     >
       <div className="container-custom w-full flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 bg-text-primary rounded-lg flex items-center justify-center transition-all group-hover:bg-accent shadow-lg shadow-slate-200">
-            <div className="w-3.5 h-3.5 bg-white rounded-sm rotate-45" />
-          </div>
-          <span className="text-[18px] font-bold text-text-primary tracking-tight">Cited</span>
+        <Link to="/" className="group inline-flex items-baseline gap-1.5">
+          <span className="font-display text-[20px] font-semibold text-text-primary tracking-[-0.04em] transition-colors">
+            Cognivo<span className="text-accent">.ai</span>
+          </span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
           <NavLink to="/how-it-works">How It Works</NavLink>
           <NavLink to="/pricing">Pricing</NavLink>
-          <NavLink to="/blog">Resources</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </div>

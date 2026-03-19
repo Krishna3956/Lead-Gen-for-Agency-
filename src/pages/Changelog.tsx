@@ -8,10 +8,10 @@ const LOGS = [
     date: 'March 18, 2026',
     type: 'Major',
     title: 'The Intelligence Update',
-    description: 'A complete overhaul of our agent reasoning engine, enabling more nuanced content creation and faster market adaptation.',
+    description: 'A complete overhaul of our reasoning engine, enabling more nuanced staffing content creation and faster market adaptation.',
     changes: [
-      'New: Memory Agent v2.0 with deep industry context mapping.',
-      'Improved: Content Agent now supports multi-format output (Video scripts, LinkedIn posts).',
+      'New: Signal Core v2.0 with deep industry context mapping.',
+      'Improved: Story Forge now supports multi-format output (Video scripts, LinkedIn posts).',
       'Fixed: Latency issues in the Lead Dashboard real-time sync.',
       'Security: Enhanced encryption for client data repositories.'
     ]
@@ -21,10 +21,10 @@ const LOGS = [
     date: 'March 5, 2026',
     type: 'Minor',
     title: 'Performance & Scale',
-    description: 'Optimizations for agencies managing multiple locations and high-volume search clusters.',
+    description: 'Optimizations for staffing firms managing multiple locations and high-volume search clusters.',
     changes: [
       'New: Multi-city dashboard view for Growth and Dominate plans.',
-      'Improved: Research Agent speed increased by 40% for deep-web scans.',
+      'Improved: Market Scout speed increased by 40% for deep-web scans.',
       'New: Integration with 5 additional staffing industry directories.'
     ]
   },
@@ -32,33 +32,33 @@ const LOGS = [
     version: 'v2.3.0',
     date: 'February 15, 2026',
     type: 'Feature',
-    title: 'Authority Agent Launch',
-    description: 'Introducing our sixth agent dedicated to building your agency\'s credibility footprint across the web.',
+    title: 'Trust Layer Launch',
+    description: 'Introducing our sixth core system dedicated to building your staffing firm\'s credibility footprint across the web.',
     changes: [
       'New: Automated directory submission and verification.',
       'New: Trust signal monitoring and reporting.',
-      'Improved: Optimization Agent now factors in external authority scores.'
+      'Improved: Growth Loop now factors in external authority scores.'
     ]
   }
 ];
 
 export const Changelog: React.FC = () => {
   return (
-    <div className="pt-20">
-      <Section className="pb-12">
+    <div className="pt-16">
+      <Section className="pb-10 md:pb-12">
         <div className="max-w-[800px]">
           <Reveal>
             <span className="eyebrow mb-6 block">CHANGELOG</span>
-            <h1 className="h1-text mb-6 italic uppercase tracking-tighter">Product updates & improvements.</h1>
+            <h1 className="h1-text mb-6">Product updates & improvements.</h1>
             <p className="body-large text-text-secondary">
-              We're shipping new features and optimizations every week to keep your agency ahead of the curve.
+              We are shipping new features and optimizations every week to keep staffing firms ahead of the curve.
             </p>
           </Reveal>
         </div>
       </Section>
 
-      <Section className="py-16">
-        <div className="max-w-[900px] space-y-24">
+      <Section className="py-12 md:py-14">
+        <div className="max-w-[900px] space-y-16 md:space-y-20">
           {LOGS.map((log, i) => (
             <div key={log.version} className="relative pl-12 md:pl-24">
               {/* TIMELINE LINE */}
@@ -84,7 +84,7 @@ export const Changelog: React.FC = () => {
                   </span>
                 </div>
 
-                <h2 className="text-[28px] md:text-[36px] font-bold text-text-primary mb-4 italic uppercase tracking-tighter">
+                <h2 className="card-heading text-[28px] md:text-[36px] mb-4">
                   {log.title}
                 </h2>
                 
@@ -92,8 +92,8 @@ export const Changelog: React.FC = () => {
                   {log.description}
                 </p>
 
-                <div className="bg-bg-surface border border-border-subtle p-8">
-                  <h3 className="text-[14px] font-bold text-text-primary uppercase tracking-widest mb-6 flex items-center gap-2 italic">
+                <div className="bg-bg-surface border border-border-subtle p-8 rounded-[32px]">
+                  <h3 className="card-heading text-[14px] uppercase tracking-wide mb-6 flex items-center gap-2">
                     <Code className="w-4 h-4 text-accent" /> Changes in this version
                   </h3>
                   <ul className="space-y-4">
@@ -112,12 +112,12 @@ export const Changelog: React.FC = () => {
       </Section>
 
       {/* CTA */}
-      <Section className="py-24">
-        <div className="bg-bg-elevated border border-border-subtle p-12 text-center">
+      <Section className="py-16 md:py-20">
+        <div className="bg-bg-elevated border border-border-subtle p-12 text-center rounded-[32px]">
           <Reveal>
-            <h2 className="text-[28px] font-bold text-text-primary mb-4 italic uppercase tracking-tighter">Want to see these features in action?</h2>
+            <h2 className="card-heading text-[28px] mb-4">Want to see these features in action?</h2>
             <p className="text-text-secondary mb-8 max-w-[500px] mx-auto">
-              Join our next product walkthrough and see how the latest updates can drive more leads for your agency.
+              Join our next product walkthrough and see how the latest updates can drive more qualified demand for your staffing firm.
             </p>
             <button className="btn-primary">
               Book a Product Demo

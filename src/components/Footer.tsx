@@ -3,19 +3,17 @@ import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-bg-base text-text-secondary pt-32 pb-16 border-t border-border-subtle">
+    <footer className="bg-bg-base text-text-secondary pt-24 pb-14 border-t border-border-subtle">
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-32">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-24">
           <div className="col-span-2 lg:col-span-2 space-y-8">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-text-primary flex items-center justify-center rounded-xl group-hover:bg-accent transition-colors">
-                <div className="w-5 h-5 bg-white rotate-45" />
-              </div>
-              <span className="text-[24px] font-bold text-text-primary tracking-tight">Cited</span>
+            <Link to="/" className="group inline-flex items-baseline gap-2">
+              <span className="font-display text-[28px] font-semibold text-text-primary tracking-[-0.04em] transition-colors">
+                Cognivo<span className="text-accent">.ai</span>
+              </span>
             </Link>
             <p className="text-text-secondary text-[15px] leading-relaxed max-w-[300px]">
-              The inbound engine for modern staffing agencies. 
-              We build your authority so you're the first choice in AI search.
+              Cognivo turns your website into a qualified inbound engine for AI search platforms.
             </p>
             <div className="flex gap-4">
               <Link to="/book-demo" className="btn-primary h-10 px-6 text-[12px]">
@@ -39,7 +37,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-text-primary font-bold mb-8 text-[12px] uppercase tracking-widest">Use Cases</h4>
             <ul className="space-y-4 text-[14px] font-medium">
               <li><FooterLink to="/use-cases/first-inbound-clients">First Inbound Clients</FooterLink></li>
-              <li><FooterLink to="/use-cases/replace-google-ads">Replace Google Ads</FooterLink></li>
+              <li><FooterLink to="/use-cases/replace-google-ads">Replace Paid Ads</FooterLink></li>
               <li><FooterLink to="/use-cases/beyond-referrals">Beyond Referrals</FooterLink></li>
               <li><FooterLink to="/use-cases/new-market-expansion">Market Expansion</FooterLink></li>
               <li><FooterLink to="/use-cases/outrank-competitors">Outrank Competitors</FooterLink></li>
@@ -50,7 +48,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-text-primary font-bold mb-8 text-[12px] uppercase tracking-widest">Compare</h4>
             <ul className="space-y-4 text-[14px] font-medium">
               <li><FooterLink to="/compare/vs-seo-agencies">vs SEO Agencies</FooterLink></li>
-              <li><FooterLink to="/compare/vs-google-ads">vs Google Ads</FooterLink></li>
+              <li><FooterLink to="/compare/vs-google-ads">vs Paid Ads</FooterLink></li>
               <li><FooterLink to="/compare/vs-lead-gen-services">vs Lead Gen</FooterLink></li>
               <li><FooterLink to="/compare/vs-in-house">vs In-House</FooterLink></li>
               <li><FooterLink to="/compare/vs-linkedin-ads">vs LinkedIn Ads</FooterLink></li>
@@ -70,7 +68,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* CITIES ROW */}
-        <div className="py-12 border-t border-border-subtle">
+        <div className="py-10 border-t border-border-subtle">
           <h4 className="text-text-muted font-bold mb-8 text-[11px] uppercase tracking-[0.2em]">Top Markets</h4>
           <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] font-bold text-text-muted">
             {['Austin', 'Dallas', 'Nashville', 'Atlanta', 'Charlotte', 'Denver', 'Phoenix', 'Miami', 'Houston', 'Seattle'].map(city => (
@@ -82,8 +80,8 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-8 text-[12px] font-bold text-text-muted uppercase tracking-widest">
-          <div>© 2026 Cited. All rights reserved.</div>
+        <div className="pt-10 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-8 text-[12px] font-bold text-text-muted uppercase tracking-widest">
+          <div>© 2026 Cognivo. All rights reserved.</div>
           <div className="flex items-center gap-8">
             <FooterLink to="/terms">Terms</FooterLink>
             <FooterLink to="/privacy">Privacy</FooterLink>

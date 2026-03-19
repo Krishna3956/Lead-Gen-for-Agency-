@@ -11,9 +11,9 @@ export interface ComparisonData {
 export const comparisons: ComparisonData[] = [
   {
     id: 'vs-seo-agencies',
-    title: 'Staff Found vs. Traditional SEO Agencies',
+    title: 'Cognivo vs. Traditional SEO Agencies',
     competitor: 'SEO Agencies',
-    description: 'Traditional SEO agencies focus on rankings and traffic. We focus on inbound client leads for staffing agencies.',
+    description: 'Traditional SEO agencies focus on rankings and traffic. We focus on qualified inbound demand for staffing agencies.',
     pros: [
       'Focus on "vanity" rankings',
       'Long-term strategy (6-12 months)',
@@ -24,13 +24,13 @@ export const comparisons: ComparisonData[] = [
       'Manual content creation',
       'Slow to adapt to AI search'
     ],
-    whyStaffFoundWins: 'We use AI agents to build 100+ high-converting pages in weeks, not months. We target hiring managers, not just traffic.'
+    whyStaffFoundWins: 'We use a staffing-specific publishing system to build 100+ high-converting pages in weeks, not months. We target hiring managers, not just traffic.'
   },
   {
     id: 'vs-google-ads',
-    title: 'Staff Found vs. Google Ads (PPC)',
-    competitor: 'Google Ads',
-    description: 'Google Ads is a "pay-to-play" model. Staff Found builds a permanent asset that you own.',
+    title: 'Cognivo vs. Paid Ads (PPC)',
+    competitor: 'Paid Ads',
+    description: 'Paid ads are a pay-to-play model. Cognivo builds a permanent inbound asset your staffing firm owns.',
     pros: [
       'Immediate traffic',
       'Precise keyword targeting',
@@ -45,9 +45,9 @@ export const comparisons: ComparisonData[] = [
   },
   {
     id: 'vs-lead-gen-services',
-    title: 'Staff Found vs. Lead Gen Services',
+    title: 'Cognivo vs. Lead Gen Services',
     competitor: 'Lead Gen Services',
-    description: 'Lead gen services often sell the same leads to multiple agencies. We build your own exclusive inbound engine.',
+    description: 'Lead gen services often sell the same leads to multiple agencies. We build your own exclusive inbound channel.',
     pros: [
       'Pre-qualified leads',
       'Pay per lead models',
@@ -62,9 +62,9 @@ export const comparisons: ComparisonData[] = [
   },
   {
     id: 'vs-in-house',
-    title: 'Staff Found vs. In-House Marketing',
+    title: 'Cognivo vs. In-House Marketing',
     competitor: 'In-House Marketing',
-    description: 'Hiring a full-time marketer is expensive and risky. Staff Found is a specialized AI team for a fraction of the cost.',
+    description: 'Hiring a full-time marketer is expensive and risky. Cognivo gives staffing firms a specialized growth system for a fraction of the cost.',
     pros: [
       'Full control',
       'Deep brand knowledge',
@@ -75,13 +75,13 @@ export const comparisons: ComparisonData[] = [
       'Single point of failure',
       'Limited specialized tools'
     ],
-    whyStaffFoundWins: 'We provide a swarm of six specialized AI agents that work 24/7. You get the output of a full team for less than a part-time hire.'
+    whyStaffFoundWins: 'You get the output of a specialized growth team built for staffing firms, without the cost and management overhead of hiring in-house.'
   },
   {
     id: 'vs-linkedin-ads',
-    title: 'Staff Found vs. LinkedIn Ads',
+    title: 'Cognivo vs. LinkedIn Ads',
     competitor: 'LinkedIn Ads',
-    description: 'LinkedIn is great for targeting, but it\'s interruptive. Staff Found targets hiring managers when they are actively searching.',
+    description: 'LinkedIn is great for targeting, but it\'s interruptive. Cognivo targets hiring managers when they are actively searching.',
     pros: [
       'Precise job title targeting',
       'High-quality professional network',
@@ -96,9 +96,9 @@ export const comparisons: ComparisonData[] = [
   },
   {
     id: 'vs-referral-only',
-    title: 'Staff Found vs. Referral-Only Growth',
+    title: 'Cognivo vs. Referral-Only Growth',
     competitor: 'Referral-Only Growth',
-    description: 'Referrals are great, but they aren\'t predictable. Staff Found builds a consistent pipeline of new clients.',
+    description: 'Referrals are great, but they are not predictable. Cognivo helps staffing firms build a steadier pipeline of new clients.',
     pros: [
       'Highest trust level',
       'Zero cost per lead',

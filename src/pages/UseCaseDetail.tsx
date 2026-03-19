@@ -13,15 +13,15 @@ export const UseCaseDetail: React.FC = () => {
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-14">
       {/* HERO */}
-      <Section background="grid" className="pt-20 pb-32">
+      <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8 rounded-none">
-              <span>USE CASE ANALYSIS</span>
+            <div className="page-chip mb-8">
+              <span className="uppercase">Use case analysis</span>
             </div>
-            <h1 className="text-[48px] md:text-[72px] font-black text-text-primary leading-[1.1] mb-8 italic uppercase tracking-tighter">
+            <h1 className="page-title mb-8">
               {useCase.title}
             </h1>
             <p className="text-[20px] text-text-secondary leading-relaxed mb-12">
@@ -40,33 +40,33 @@ export const UseCaseDetail: React.FC = () => {
       </Section>
 
       {/* PROBLEM / SOLUTION / OUTCOME */}
-      <Section className="py-24 border-y border-border-subtle bg-bg-surface">
+      <Section className="py-16 md:py-20 border-y border-border-subtle bg-bg-surface">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <Reveal delay={100} className="glass-card p-10">
             <div className="text-red-500 text-[12px] font-bold uppercase tracking-widest mb-6">The Problem</div>
-            <h3 className="text-[24px] font-bold text-text-primary mb-4 italic uppercase tracking-tighter">The Grind</h3>
+            <h3 className="card-heading text-[24px] mb-4">The Grind</h3>
             <p className="text-text-secondary leading-relaxed">{useCase.problem}</p>
           </Reveal>
           <Reveal delay={200} className="glass-card p-10 border-accent/20 bg-accent/5">
             <div className="text-accent text-[12px] font-bold uppercase tracking-widest mb-6">The Solution</div>
-            <h3 className="text-[24px] font-bold text-text-primary mb-4 italic uppercase tracking-tighter">The Engine</h3>
+            <h3 className="card-heading text-[24px] mb-4">The Engine</h3>
             <p className="text-text-secondary leading-relaxed">{useCase.solution}</p>
           </Reveal>
           <Reveal delay={300} className="glass-card p-10">
             <div className="text-accent text-[12px] font-bold uppercase tracking-widest mb-6">The Outcome</div>
-            <h3 className="text-[24px] font-bold text-text-primary mb-4 italic uppercase tracking-tighter">The Result</h3>
+            <h3 className="card-heading text-[24px] mb-4">The Result</h3>
             <p className="text-text-secondary leading-relaxed">{useCase.outcome}</p>
           </Reveal>
         </div>
       </Section>
 
       {/* WHY IT WORKS */}
-      <Section className="py-32">
+      <Section className="py-20 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <Reveal>
-            <h2 className="text-[40px] md:text-[56px] font-black text-text-primary mb-8 leading-tight italic uppercase tracking-tighter">
+            <h2 className="section-heading md:text-[56px] mb-8">
               Why this works <br />
-              <span className="text-accent">for your agency.</span>
+              <span className="text-accent">for your firm.</span>
             </h2>
             <div className="space-y-8">
               <div className="flex gap-6">
@@ -74,10 +74,10 @@ export const UseCaseDetail: React.FC = () => {
                   <Target className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[18px] font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Intent-Based Capture</h4>
+                  <h4 className="card-heading text-[18px] mb-2">Intent-Based Capture</h4>
                   <p className="text-text-secondary">
-                    We don't just broadcast; we capture. We put you in front of clients 
-                    at the exact moment they are ready to hire.
+                    We do not just broadcast; we capture. We put you in front of clients 
+                    at the exact moment they are asking AI platforms who to hire.
                   </p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export const UseCaseDetail: React.FC = () => {
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[18px] font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Built-In Trust</h4>
+                  <h4 className="card-heading text-[18px] mb-2">Built-In Trust</h4>
                   <p className="text-text-secondary">
                     Our system builds the authority signals that convince 
                     hiring managers that you are the established expert.
@@ -98,9 +98,9 @@ export const UseCaseDetail: React.FC = () => {
                   <TrendingUp className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[18px] font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Compounding Growth</h4>
+                  <h4 className="card-heading text-[18px] mb-2">Compounding Growth</h4>
                   <p className="text-text-secondary">
-                    Unlike ads, our inbound engine builds a permanent asset 
+                    Unlike paid ads, our inbound engine builds a permanent asset 
                     that continues to grow and perform over time.
                   </p>
                 </div>
@@ -109,7 +109,7 @@ export const UseCaseDetail: React.FC = () => {
           </Reveal>
 
           <Reveal delay={200} className="glass-card p-12 bg-accent text-white border-none">
-            <h3 className="text-[32px] font-black mb-6 leading-tight italic uppercase tracking-tighter">
+            <h3 className="section-heading text-white text-[32px] mb-6">
               Stop settling for <br />
               unpredictable growth.
             </h3>
@@ -125,9 +125,9 @@ export const UseCaseDetail: React.FC = () => {
       </Section>
 
       {/* OTHER USE CASES */}
-      <Section background="surface" className="py-24 border-t border-border-subtle">
+      <Section background="surface" className="py-16 md:py-20 border-t border-border-subtle">
         <div className="mb-12">
-          <h3 className="text-[24px] font-bold text-text-primary italic uppercase tracking-tighter">Other Use Cases</h3>
+          <h3 className="card-heading text-[24px]">Other Use Cases</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.filter(u => u.id !== id).map(u => (
@@ -136,7 +136,7 @@ export const UseCaseDetail: React.FC = () => {
               to={`/use-cases/${u.id}`}
               className="glass-card p-8 group hover:border-accent transition-all"
             >
-              <h4 className="text-[18px] font-bold text-text-primary mb-4 group-hover:text-accent transition-colors italic uppercase tracking-tighter">{u.title}</h4>
+              <h4 className="card-heading text-[18px] mb-4 group-hover:text-accent transition-colors">{u.title}</h4>
               <p className="text-[14px] text-text-secondary line-clamp-2 mb-6">{u.description}</p>
               <div className="flex items-center gap-2 text-accent text-[12px] font-bold uppercase tracking-widest">
                 Learn More <ArrowRight className="w-3 h-3" />

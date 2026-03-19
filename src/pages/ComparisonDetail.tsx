@@ -13,15 +13,15 @@ export const ComparisonDetail: React.FC = () => {
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-14">
       {/* HERO */}
-      <Section background="grid" className="pt-20 pb-32">
+      <Section background="grid" className="pt-12 pb-16 md:pt-16 md:pb-20">
         <div className="max-w-[800px]">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8">
-              <span>COMPETITIVE ANALYSIS</span>
+            <div className="page-chip mb-8">
+              <span className="uppercase">Competitive analysis</span>
             </div>
-            <h1 className="text-[48px] md:text-[72px] font-black text-text-primary leading-[1.1] mb-8 italic uppercase tracking-tighter">
+            <h1 className="page-title mb-8">
               {comparison.title}
             </h1>
             <p className="text-[20px] text-text-secondary leading-relaxed mb-12">
@@ -42,10 +42,10 @@ export const ComparisonDetail: React.FC = () => {
       </Section>
 
       {/* COMPARISON TABLE */}
-      <Section className="py-24 border-y border-border-subtle bg-bg-surface">
+      <Section className="py-16 md:py-20 border-y border-border-subtle bg-bg-surface">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <Reveal delay={100} className="glass-card p-10 border-red-500/20">
-            <h3 className="text-[24px] font-bold text-text-primary mb-8 flex items-center gap-3 italic uppercase tracking-tighter">
+            <h3 className="card-heading text-[24px] mb-8 flex items-center gap-3">
               <X className="text-red-500 w-6 h-6" />
               {comparison.competitor}
             </h3>
@@ -60,9 +60,9 @@ export const ComparisonDetail: React.FC = () => {
           </Reveal>
 
           <Reveal delay={200} className="glass-card p-10 border-accent/20 bg-accent/5">
-            <h3 className="text-[24px] font-bold text-text-primary mb-8 flex items-center gap-3 italic uppercase tracking-tighter">
+            <h3 className="card-heading text-[24px] mb-8 flex items-center gap-3">
               <Check className="text-accent w-6 h-6" />
-              Staff Found
+              Cognivo
             </h3>
             <ul className="space-y-6">
               <li className="flex items-start gap-4 text-text-primary font-medium">
@@ -87,29 +87,29 @@ export const ComparisonDetail: React.FC = () => {
       </Section>
 
       {/* WHY WE WIN */}
-      <Section className="py-32">
+      <Section className="py-20 md:py-24">
         <div className="max-w-[800px] mx-auto text-center">
           <Reveal>
-            <h2 className="text-[40px] md:text-[56px] font-black text-text-primary mb-8 italic uppercase tracking-tighter">
-              The Staff Found <span className="text-accent">Advantage.</span>
+            <h2 className="section-heading md:text-[56px] mb-8">
+              The Cognivo <span className="text-accent">Advantage.</span>
             </h2>
             <p className="text-[22px] text-text-secondary leading-relaxed mb-12 italic">
               "{comparison.whyStaffFoundWins}"
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-              <div className="p-8 bg-bg-surface border border-border-subtle">
+              <div className="p-8 bg-bg-surface border border-border-subtle rounded-[32px]">
                 <Zap className="text-accent w-8 h-8 mb-6" />
-                <h4 className="font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Speed to Market</h4>
+                <h4 className="card-heading text-[18px] mb-2">Speed to Market</h4>
                 <p className="text-[14px] text-text-secondary">We deploy in weeks, not months. You see results faster.</p>
               </div>
-              <div className="p-8 bg-bg-surface border border-border-subtle">
+              <div className="p-8 bg-bg-surface border border-border-subtle rounded-[32px]">
                 <Shield className="text-accent w-8 h-8 mb-6" />
-                <h4 className="font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Built for Trust</h4>
+                <h4 className="card-heading text-[18px] mb-2">Built for Trust</h4>
                 <p className="text-[14px] text-text-secondary">We build authority signals that hiring managers actually value.</p>
               </div>
-              <div className="p-8 bg-bg-surface border border-border-subtle">
+              <div className="p-8 bg-bg-surface border border-border-subtle rounded-[32px]">
                 <Target className="text-accent w-8 h-8 mb-6" />
-                <h4 className="font-bold text-text-primary mb-2 italic uppercase tracking-tighter">Intent-Based</h4>
+                <h4 className="card-heading text-[18px] mb-2">Intent-Based</h4>
                 <p className="text-[14px] text-text-secondary">We capture clients when they are actively looking to hire.</p>
               </div>
             </div>
@@ -118,14 +118,14 @@ export const ComparisonDetail: React.FC = () => {
       </Section>
 
       {/* CALL TO ACTION */}
-      <Section background="grid" className="py-32 border-t border-border-subtle">
+      <Section background="grid" className="py-20 md:py-24 border-t border-border-subtle">
         <div className="text-center">
           <Reveal>
-            <h3 className="text-[32px] md:text-[48px] font-black text-text-primary mb-8 italic uppercase tracking-tighter">
+            <h3 className="section-heading mb-8">
               Stop settling for <span className="text-accent">{comparison.competitor}.</span>
             </h3>
             <p className="text-[18px] text-text-secondary mb-12 max-w-[600px] mx-auto">
-              Get a free market audit and see why Staff Found is the superior 
+              Get a free market audit and see why Cognivo is the superior 
               choice for modern staffing agencies.
             </p>
             <Link to="/free-audit" className="btn-primary px-12 h-14 text-[16px]">

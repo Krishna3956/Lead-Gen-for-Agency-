@@ -4,9 +4,9 @@ import { Users, Target, Zap, Shield, Globe, BarChart3, Heart, Sparkles, Rocket }
 
 export const About: React.FC = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       {/* HERO */}
-      <Section className="pb-24 pt-20">
+      <Section className="pb-16 pt-12 md:pb-20 md:pt-16">
         <div className="max-w-[800px] mx-auto text-center">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
@@ -14,10 +14,10 @@ export const About: React.FC = () => {
               <span className="uppercase">Our Mission</span>
             </div>
             <h1 className="text-[56px] md:text-[80px] font-display font-medium text-text-primary leading-[1.05] mb-8 tracking-tight">
-              The future of <br /><span className="italic text-accent">agency authority.</span>
+              We help staffing firms turn their sites <br /><span className="italic text-accent">into inbound growth systems.</span>
             </h1>
             <p className="text-[20px] md:text-[22px] text-text-secondary max-w-[600px] mx-auto leading-relaxed">
-              We're building the autonomous infrastructure that allows staffing agencies to scale through authority, not interruption.
+              Cognivo exists to help staffing agencies stop relying only on outbound, referrals, and paid traffic, and start building a site that consistently brings in qualified hiring conversations.
             </p>
           </Reveal>
         </div>
@@ -32,14 +32,14 @@ export const About: React.FC = () => {
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <h2 className="text-[32px] md:text-[40px] font-display font-medium text-text-primary mb-8 leading-tight tracking-tight">
-                    Why we started <br /><span className="italic text-accent">Cited.</span>
+                    Why we built <br /><span className="italic text-accent">Cognivo.</span>
                   </h2>
                   <div className="space-y-6 text-[16px] md:text-[18px] text-text-secondary leading-relaxed">
                     <p>
-                      Staffing is a $600B industry still running on 1990s technology. Agencies spend 40% of their revenue on "outbound" — cold calls, emails, and manual research that prospects hate.
+                      Most staffing agencies still grow through referrals, recruiter hustle, and paid demand capture. It works, but it rarely compounds, and it weakens the moment the team stops pushing.
                     </p>
                     <p>
-                      We saw a different way. By leveraging autonomous AI agents, we could build an inbound engine that works 24/7, identifying high-intent searches and building authority automatically.
+                      We saw a better model: build the website itself into the engine. That means understanding what hiring managers ask AI platforms, publishing staffing pages around those needs, strengthening trust signals, and making the firm easier to discover across AI search.
                     </p>
                   </div>
                 </div>
@@ -64,26 +64,26 @@ export const About: React.FC = () => {
       </Section>
 
       {/* VALUES */}
-      <Section className="py-32">
+      <Section className="py-20 md:py-24">
         <div className="max-w-[1200px] mx-auto">
           <Reveal>
-            <div className="text-center mb-20">
+            <div className="text-center mb-14 md:mb-16">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
                 <Sparkles className="w-3 h-3" />
                 <span className="uppercase">Our Values</span>
               </div>
-              <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-6 tracking-tight">Our Core Principles</h2>
+              <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-6 tracking-tight">How we think about staffing growth</h2>
               <p className="text-[18px] md:text-[20px] text-text-secondary max-w-[600px] mx-auto leading-relaxed">
-                The values that guide every line of code we write.
+                The principles behind every growth system we build for staffing firms.
               </p>
             </div>
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "Inbound First", desc: "We believe the best clients are the ones who find you. We build assets that attract, not tools that interrupt.", icon: Target },
-              { title: "Technical Excellence", desc: "We don't just generate content. We build technically perfect pages that satisfy the most rigorous AI search standards.", icon: Zap },
-              { title: "Radical Transparency", desc: "No \"black box\" algorithms. You see exactly what our agents are doing and the ROI they are generating.", icon: BarChart3 }
+              { title: "Inbound First", desc: "We believe the best staffing clients are the ones already searching for your help. We build assets that attract demand instead of interrupting it.", icon: Target },
+              { title: "Staffing-Specific Execution", desc: "We do not publish generic SEO content. We build pages around specialties, roles, markets, and hiring problems real staffing buyers care about.", icon: Zap },
+              { title: "Radical Transparency", desc: "No black-box mystery. You see what is being published, which searches are growing, and where the pipeline is coming from.", icon: BarChart3 }
             ].map((value, i) => (
               <Reveal key={i} delay={i * 100}>
                 <div className="bento-card p-10 h-full flex flex-col">
@@ -99,16 +99,16 @@ export const About: React.FC = () => {
         </div>
       </Section>
 
-      <Section className="py-32 border-t border-black/5">
+      <Section className="py-20 md:py-24 border-t border-black/5">
         <div className="max-w-[800px] mx-auto text-center">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/10 text-accent text-[12px] font-semibold tracking-wide mb-8 rounded-full">
               <Rocket className="w-3 h-3" />
               <span className="uppercase">Join Us</span>
             </div>
-            <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-8 tracking-tight">Join the Inbound Revolution</h2>
+            <h2 className="text-[40px] md:text-[56px] font-display font-medium text-text-primary mb-8 tracking-tight">Built for the next generation of staffing firms</h2>
             <p className="text-[20px] text-text-secondary mb-12 leading-relaxed">
-              We're a distributed team of engineers, designers, and staffing experts obsessed with one goal: making your agency the undisputed authority in your market.
+              We are a distributed team of engineers, designers, and staffing operators obsessed with one goal: helping great recruiting firms become easier to find and easier to trust.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button className="btn-primary px-10 py-4 text-[15px]">View Open Positions</button>
