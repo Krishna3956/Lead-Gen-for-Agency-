@@ -15,11 +15,7 @@ export const SignIn: React.FC = () => {
               <Link to="/" className="brand-wordmark text-[30px] text-white">
                 Cognivo<span className="text-sky-300">.ai</span>
               </Link>
-              <div className="mt-12 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-sky-100">
-                <Sparkles className="h-3.5 w-3.5" />
-                Staffing Intelligence
-              </div>
-              <h1 className="mt-8 max-w-[420px] text-[52px] font-display font-medium leading-[0.96] tracking-tight text-white">
+              <h1 className="mt-12 max-w-[420px] text-[52px] font-display font-medium leading-[0.96] tracking-tight text-white">
                 Sign in to the Cognivo workspace.
               </h1>
               <p className="mt-6 max-w-[430px] text-[18px] leading-relaxed text-slate-300">

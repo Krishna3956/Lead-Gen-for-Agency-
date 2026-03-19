@@ -1,10 +1,10 @@
 import React from 'react';
 import { PlatformLogoRotator } from '@/src/components/PlatformLogoRotator';
 import { Section, Reveal } from '@/src/components/Section';
-import { Link } from 'react-router-dom';
 import { ChevronRight, ArrowRight, Zap, Target, Search, BarChart3, Shield, Globe, Users } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 import { motion } from 'motion/react';
+import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const Home: React.FC = () => {
   const [isAuditModalOpen, setIsAuditModalOpen] = React.useState(false);
@@ -39,12 +39,9 @@ export const Home: React.FC = () => {
                   className="h-14 flex-1 rounded-[22px] border border-transparent bg-gradient-to-br from-bg-surface to-accent/5 px-5 text-[16px] text-text-primary outline-none transition-all placeholder:text-text-muted focus:border-accent"
                   placeholder="Enter your business email"
                 />
-                <Link
-                  to="/sign-in"
-                  className="flex h-14 whitespace-nowrap items-center justify-center rounded-[22px] bg-accent px-8 text-[16px] font-bold text-white shadow-xl shadow-accent/25 transition-all hover:scale-[1.01] hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30"
-                >
-                  Sign in
-                </Link>
+                <WaitlistButton className="flex h-14 whitespace-nowrap items-center justify-center rounded-[22px] bg-accent px-8 text-[16px] font-bold text-white shadow-xl shadow-accent/25 transition-all hover:scale-[1.01] hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30">
+                  Join the Waitlist
+                </WaitlistButton>
               </div>
               <p className="mt-7 text-[14px] font-medium text-text-muted">
                 800+ staffing agencies have already registered for early access.

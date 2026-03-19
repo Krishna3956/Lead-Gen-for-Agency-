@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/src/lib/utils';
 import { ChevronDown } from 'lucide-react';
 import { useCases } from '@/src/data/useCases';
-import { WaitlistButton } from '@/src/components/WaitlistButton';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -37,9 +36,9 @@ export const Navbar: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <WaitlistButton className="h-11 px-6 rounded-2xl bg-accent text-white text-[14px] font-bold tracking-tight shadow-lg shadow-accent/20 transition-all hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 flex items-center justify-center">
-            Join the Waitlist
-          </WaitlistButton>
+          <Link to="/sign-in" className="h-11 px-6 rounded-2xl bg-accent text-white text-[14px] font-bold tracking-tight shadow-lg shadow-accent/20 transition-all hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 flex items-center justify-center">
+            Sign in
+          </Link>
         </div>
       </div>
     </nav>
