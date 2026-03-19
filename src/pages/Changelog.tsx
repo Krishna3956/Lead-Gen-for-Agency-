@@ -117,10 +117,10 @@ export const Changelog: React.FC = () => {
           <Reveal>
             <h2 className="card-heading text-[28px] mb-4">Want to see these features in action?</h2>
             <p className="text-text-secondary mb-8 max-w-[500px] mx-auto">
-              Join our next product walkthrough and see how the latest updates can drive more qualified demand for your staffing firm.
+              Join the waitlist to get early access to the latest Cognivo updates and product releases.
             </p>
             <button className="btn-primary">
-              Book a Product Demo
+              Join the Waitlist
             </button>
           </Reveal>
         </div>

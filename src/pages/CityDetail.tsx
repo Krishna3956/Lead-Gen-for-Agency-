@@ -121,7 +121,7 @@ export const CityDetail: React.FC = () => {
               they are ready to hire.
             </p>
             <Link to="/book-demo" className="btn-primary bg-white text-accent hover:bg-white/90 w-full">
-              Book a {city.name} Strategy Call
+              Join the Waitlist
             </Link>
           </Reveal>
         </div>

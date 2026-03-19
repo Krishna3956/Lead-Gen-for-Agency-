@@ -16,7 +16,7 @@ const PLANS = [
       'Standard AI agent reasoning'
     ],
     monthly: 250,
-    btn: 'Start Foundation',
+    btn: 'Join Foundation Waitlist',
     type: 'secondary'
   },
   {
@@ -31,7 +31,7 @@ const PLANS = [
       'Priority agent reasoning'
     ],
     monthly: 450,
-    btn: 'Start Growth',
+    btn: 'Join Growth Waitlist',
     type: 'primary',
     popular: true
   },
@@ -47,7 +47,7 @@ const PLANS = [
       'Custom agent workflows'
     ],
     monthly: 750,
-    btn: 'Start Dominate',
+    btn: 'Join Dominate Waitlist',
     type: 'secondary'
   }
 ];

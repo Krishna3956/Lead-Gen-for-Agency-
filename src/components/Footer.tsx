@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-24">
           <div className="col-span-2 lg:col-span-2 space-y-8">
             <Link to="/" className="group inline-flex items-baseline gap-2">
-              <span className="font-display text-[28px] font-semibold text-text-primary tracking-[-0.04em] transition-colors">
+              <span className="brand-wordmark text-[30px] transition-colors">
                 Cognivo<span className="text-accent">.ai</span>
               </span>
             </Link>
@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <Link to="/book-demo" className="btn-primary h-10 px-6 text-[12px]">
-                Book Demo
+                Join the Waitlist
               </Link>
             </div>
           </div>

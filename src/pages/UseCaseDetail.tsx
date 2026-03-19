@@ -29,7 +29,7 @@ export const UseCaseDetail: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/book-demo" className="btn-primary">
-                Book a Demo
+                Join the Waitlist
               </Link>
               <Link to="/free-audit" className="btn-secondary">
                 Get Free Audit
@@ -118,7 +118,7 @@ export const UseCaseDetail: React.FC = () => {
               new business that modern staffing agencies need to thrive.
             </p>
             <Link to="/book-demo" className="btn-primary bg-white text-accent hover:bg-white/90 w-full">
-              Book a Strategy Call
+              Join the Waitlist
             </Link>
           </Reveal>
         </div>

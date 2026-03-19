@@ -66,7 +66,7 @@ export const BlogDetail: React.FC = () => {
                 Get My Free Audit
               </Link>
               <Link to="/book-demo" className="btn-secondary h-14 px-10 text-[16px]">
-                Book a Demo
+                Join the Waitlist
               </Link>
             </div>
           </Reveal>

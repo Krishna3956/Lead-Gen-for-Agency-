@@ -29,7 +29,7 @@ export const FeatureDetail: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/book-demo" className="btn-primary">
-                Book a Demo
+                Join the Waitlist
               </Link>
               <Link to="/pricing" className="btn-secondary">
                 View Pricing

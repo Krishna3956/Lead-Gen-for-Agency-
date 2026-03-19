@@ -26,9 +26,9 @@ const PLATFORM_LOGOS: PlatformLogo[] = [
     kind: 'lockup',
     alt: 'ChatGPT',
     iconSrc: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/ChatGPT-Logo.svg',
-    iconClassName: 'h-[0.82em] w-[0.82em] shrink-0',
+    iconClassName: 'h-[0.82em] w-[0.82em] shrink-0 chatgpt-green-logo',
     label: 'ChatGPT',
-    labelClassName: 'text-[0.68em] font-semibold tracking-tight text-text-primary',
+    labelClassName: 'text-[0.68em] font-semibold tracking-tight text-[#10A37F]',
   },
   {
     id: 'perplexity',
@@ -135,6 +135,10 @@ export const PlatformLogoRotator: React.FC = () => {
 
         .animate-platform-fade {
           animation: platform-fade 1.8s ease both;
+        }
+
+        .chatgpt-green-logo {
+          filter: brightness(0) saturate(100%) invert(44%) sepia(79%) saturate(575%) hue-rotate(118deg) brightness(92%) contrast(96%);
         }
       `}</style>
     </>
